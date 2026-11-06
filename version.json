@@ -1,11 +1,11 @@
 {
-  "version": "3.9.2",
-  "notes": "AFK/alvás után azonnali újracsatlakozás; a felület letisztítva.",
+  "version": "3.9.3",
+  "notes": "A build magától újrapróbálkozik, ha egy pillanatra megszakad a kapcsolat (nincs több felesleges hibaüzenet).",
   "files": {
     "OLVASS_EL.txt": "701bda00cb4d0c06fa2b8b35166a5a24351372fac5c8e4412546acd1fa12951f",
-    "rmcore_3_9_2.cp312-win_amd64.pyd": "e7b3ced7eb9d2c68a71f0ffec0ab718ae8c27505e24b11e7453d65f8f13ca54d",
-    "server.py": "f0f8cbb7d37c6b9406f709225ce3129bd8bd74ea5055cb79c125993b7b405ffc",
-    "web/app.js": "4af1a185f0914df0d65ea0cac4e8e2a0abb8c10488651816362b2635eedf9b08",
+    "rmcore_3_9_3.cp312-win_amd64.pyd": "3e7eb74496d22beacf592fae7c5911a4a6ddd9290dbf414bb179f2a7485aa446",
+    "server.py": "814043978048f4a2624f0525216f384cc55c248e7b81774446fe11a55876e12f",
+    "web/app.js": "c50d0dcf4a89ecc018d4ce95b51c6ccf7c2fe0a9260ea511efc9a8b6b0c5e87d",
     "web/i18n.js": "40a27b6832cedba6c6e393873c9f6f46d884942e4124c6f1ec2fe22f536d5000",
     "web/index.html": "f128e52fa73d1262658b8eefc5813bacc46ea698bd733b23e3490b0f7479f335",
     "web/logo.svg": "b7496c8d4e6a34216ce033f6eea639b52c593726be5babb0d200bc11c846fe41",
