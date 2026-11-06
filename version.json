@@ -1,10 +1,10 @@
 {
-  "version": "3.9.5",
-  "notes": "Őrszem: ha a program leáll (pl. alvás után), pár percen belül magától visszaindul.",
+  "version": "3.9.6",
+  "notes": "Frissítés-javítás: egységes sortörés, az ellenőrzőösszegek mindig egyeznek.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_9_5.cp312-win_amd64.pyd": "df4317415c8d9f0e8e1d6a4cc448a3ed5c7e8c7056fb49669850e70243e904fc",
-    "server.py": "bf2de7fae44c80f1aca5cc62432f147fab05f302b6cfd2c1036cbb8c9dc91691",
+    "rmcore_3_9_6.cp312-win_amd64.pyd": "1d4aaa52b59bf141ddfcfccb3ea8235282f6f04764c8789e1243e740d1a24736",
+    "server.py": "99c02141c4767f0f40c8bde2128889f5352a6bfd1665518e8096bd4c61e2fdb1",
     "web/app.js": "ea4429d0e1e0c2bb304a407526292333e4fa606124d0a2e0ff8aa2a425ea3e21",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "e11faf8e643276000813c2026d403b23d62852cbecf6dd5ea413320c28f5a448",
