@@ -1,6 +1,6 @@
 # A weboldalról letölthető telepítőt teszi közzé.
-# A telepítőt a riftmester tároló "dist" ága tartalmazza (ott készül a fordításkor).
-# Ez a folyamat onnan leszedi, és kiadja ehhez a tárolóhoz (releases) – ezt a session nem tudja közvetlenül.
+# A telepítő ennek a tárolónak a "dist" ágán van (oda Claude tölti fel fordítás után),
+# így a riftmester tároló akár privát is lehet – ez a folyamat nem függ tőle.
 name: Telepítő közzététele
 
 on:
@@ -19,10 +19,11 @@ jobs:
       - name: Verzió
         id: ver
         run: echo "v=$(python3 -c "import json;print(json.load(open('version.json'))['version'])")" >> $GITHUB_OUTPUT
-      - name: Telepítő letöltése a riftmester dist ágáról
-        run: |
-          git clone -q --depth 1 -b dist https://github.com/Szozii/riftmester src
-          ls -la src/installers
+      - name: Telepítő a dist ágról
+        uses: actions/checkout@v4
+        with:
+          ref: dist
+          path: inst
       - name: Kiadás
         env:
           GH_TOKEN: ${{ github.token }}
@@ -32,4 +33,4 @@ jobs:
           gh release create "v$v" -R ${{ github.repository }} --latest \
             -t "RiftMester $v" \
             -n "Lefordított, védett kiadás. A program magától frissül erre a verzióra." \
-            src/installers/RiftMester-Setup.exe src/installers/RiftMester-portable.zip
+            inst/installers/RiftMester-Setup.exe inst/installers/RiftMester-portable.zip
