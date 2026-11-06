@@ -1,11 +1,11 @@
 {
-  "version": "3.9.1",
-  "notes": "Védett kiadás: a program magja lefordítva, gyorsabb és biztonságosabb frissítések. / Protected build: compiled core.",
+  "version": "3.9.2",
+  "notes": "AFK/alvás után azonnali újracsatlakozás; a felület letisztítva.",
   "files": {
     "OLVASS_EL.txt": "701bda00cb4d0c06fa2b8b35166a5a24351372fac5c8e4412546acd1fa12951f",
-    "rmcore_3_9_1.cp312-win_amd64.pyd": "55c3af20b32348d8ba6d225b769ac49a723dcb9a919de2eac7ee31d006581500",
-    "server.py": "a7f15ef95cde9cd410418d7565e9d1f2bc641dab44bba8d33d68a5a121cd65c1",
-    "web/app.js": "9393161b43d1b3ffae8d1dddd9dd8ca925af26edaa3eeae8a776be5876a5ef9d",
+    "rmcore_3_9_2.cp312-win_amd64.pyd": "e7b3ced7eb9d2c68a71f0ffec0ab718ae8c27505e24b11e7453d65f8f13ca54d",
+    "server.py": "f0f8cbb7d37c6b9406f709225ce3129bd8bd74ea5055cb79c125993b7b405ffc",
+    "web/app.js": "4af1a185f0914df0d65ea0cac4e8e2a0abb8c10488651816362b2635eedf9b08",
     "web/i18n.js": "40a27b6832cedba6c6e393873c9f6f46d884942e4124c6f1ec2fe22f536d5000",
     "web/index.html": "f128e52fa73d1262658b8eefc5813bacc46ea698bd733b23e3490b0f7479f335",
     "web/logo.svg": "b7496c8d4e6a34216ce033f6eea639b52c593726be5babb0d200bc11c846fe41",
