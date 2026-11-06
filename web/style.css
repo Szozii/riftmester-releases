@@ -668,3 +668,122 @@ select.set-input { cursor: pointer; }
 .ig-l4 b { color: #e6ecf5; }
 .ig-load { flex-direction: column; gap: 5px; margin-top: auto; }
 .ig-load i { flex: none; height: 12px; }
+
+/* ================================================================ v4 – látványos "gamer" réteg
+   Minden folyamatos animáció csak akkor fut, ha tényleg nézed:
+   - body.in-game (fut a meccs) és body.fx-off (rejtett ablak / visszafogott mód) esetén leáll.
+   Az effektek a hős színeire épülnek (--champ, --champ2, --champ-rgb), és transform/opacity alapúak,
+   hogy a videókártya olcsón vigye. */
+
+/* --- mozgó hős-splash (lassú Ken-Burns úsztatás + belépő áttűnés) --- */
+.hero-img { opacity: 1; animation: heroFade 1s ease-out both, kenburns 32s ease-in-out 1s infinite alternate; transform-origin: 62% 30%; will-change: transform; }
+@keyframes heroFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes kenburns { from { transform: scale(1.06) translate3d(0,0,0); } to { transform: scale(1.16) translate3d(-2.2%, -1.6%, 0); } }
+
+/* fénysöprés végig a fejlécen, időnként */
+.hero { isolation: isolate; }
+.hero::before { content: ""; display: block; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(105deg, transparent 38%, rgba(var(--champ-rgb), .18) 48%, rgba(255,255,255,.28) 50%, rgba(var(--champ-rgb), .18) 52%, transparent 62%);
+  transform: translateX(-120%); animation: heroSweep 7s ease-in-out 2s infinite; mix-blend-mode: screen; }
+@keyframes heroSweep { 0%, 72% { transform: translateX(-120%); } 88%, 100% { transform: translateX(120%); } }
+
+/* vékony, lüktető energia-vonal a fejléc alján, a hős színével */
+.hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; z-index: 3; pointer-events: none;
+  background: linear-gradient(90deg, transparent, var(--champ) 20%, var(--champ2) 50%, var(--champ) 80%, transparent);
+  background-size: 200% 100%; opacity: .9; animation: lineFlow 6s linear infinite; box-shadow: 0 0 12px rgba(var(--champ-rgb), .6); }
+@keyframes lineFlow { to { background-position: 200% 0; } }
+
+/* a hős neve: finom fény-csillanás */
+.champ-name { background: linear-gradient(100deg, #fff 30%, color-mix(in srgb, var(--champ) 70%, #fff) 50%, #fff 70%); background-size: 220% 100%;
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: nameShine 9s ease-in-out infinite; }
+@keyframes nameShine { 0%, 70% { background-position: 120% 0; } 85%, 100% { background-position: -20% 0; } }
+
+/* --- élő háttér: lassú úszás + egy harmadik, pulzáló fény --- */
+#bgImg { animation: bgFloat 40s ease-in-out infinite alternate; will-change: transform; }
+@keyframes bgFloat { from { transform: scale(1.0) translate3d(0,0,0); } to { transform: scale(1.12) translate3d(1.5%, 1%, 0); } }
+#bg .glow.g3 { position: absolute; width: 360px; height: 360px; border-radius: 50%; filter: blur(90px); opacity: .12;
+  background: var(--champ2); top: 30%; left: 55%; animation: drift 22s ease-in-out -5s infinite alternate; }
+.glow { animation-duration: 16s; }
+
+/* --- gombok: fénysöprés hoverre + erősebb ragyogás --- */
+.btn { position: relative; overflow: hidden; }
+.btn::after { content: ""; position: absolute; top: 0; left: 0; width: 70%; height: 100%; pointer-events: none;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent); transform: translateX(-180%) skewX(-18deg); }
+.btn:hover::after { animation: btnSweep .75s ease-out; }
+@keyframes btnSweep { to { transform: translateX(260%) skewX(-18deg); } }
+.btn:active { transform: translateY(1px) scale(.985); }
+.btn.full { border-color: var(--champ); box-shadow: 0 0 0 1px rgba(var(--champ-rgb), .3), 0 0 18px rgba(var(--champ-rgb), .18); animation: btnPulse 3s ease-in-out infinite; }
+@keyframes btnPulse { 50% { box-shadow: 0 0 0 1px rgba(var(--champ-rgb), .55), 0 0 26px rgba(var(--champ-rgb), .4); } }
+
+/* --- felső menü: aktív fül ragyogó aláhúzással --- */
+.nav-btn { position: relative; }
+.nav-btn.on::after { content: ""; position: absolute; left: 10px; right: 10px; bottom: 1px; height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--champ), transparent); box-shadow: 0 0 8px rgba(var(--champ-rgb), .8); animation: underGlow 2.4s ease-in-out infinite; }
+@keyframes underGlow { 50% { opacity: .45; } }
+.nav-btn:hover { transform: translateY(-1px); }
+
+/* --- állapot pont: táguló gyűrű --- */
+.status .dot { position: relative; }
+.status.on .dot::after, .status.select .dot::after, .status.game .dot::after { content: ""; position: absolute; inset: -3px; border-radius: 50%;
+  border: 1.5px solid currentColor; color: inherit; animation: ring 1.8s ease-out infinite; opacity: 0; }
+.status.on .dot::after { border-color: var(--good); }
+.status.game .dot::after { border-color: var(--mid); }
+.status.select .dot::after { border-color: var(--champ2); }
+@keyframes ring { 0% { transform: scale(.7); opacity: .7; } 100% { transform: scale(2.1); opacity: 0; } }
+
+/* --- mód-fülek: aktívon fénysöprés --- */
+.mtab.on { position: relative; overflow: hidden; }
+.mtab.on::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(100deg, transparent 40%, rgba(255,255,255,.18) 50%, transparent 60%); transform: translateX(-120%); animation: heroSweep 5s ease-in-out 1s infinite; }
+
+/* --- kártyák: belépő-stagger fülváltáskor + ragyogó sarkok + hover --- */
+.card { transition: transform .18s ease, box-shadow .18s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,.45), 0 0 0 1px rgba(var(--champ-rgb), .25); }
+.card::before, .card::after { transition: box-shadow .3s; }
+.card:hover::before, .card:hover::after { box-shadow: 0 0 10px rgba(var(--champ-rgb), .7); }
+body.page-enter #content > .card, body.page-enter #content > .note,
+body.page-enter #csContent > *, body.page-enter #igContent > *, body.page-enter #statsContent > * {
+  animation: cardUp .5s cubic-bezier(.2,.8,.2,1) both; }
+body.page-enter #content > *:nth-child(1) { animation-delay: .03s; }
+body.page-enter #content > *:nth-child(2) { animation-delay: .09s; }
+body.page-enter #content > *:nth-child(3) { animation-delay: .15s; }
+body.page-enter #content > *:nth-child(4) { animation-delay: .21s; }
+body.page-enter #content > *:nth-child(5) { animation-delay: .27s; }
+body.page-enter #content > *:nth-child(n+6) { animation-delay: .33s; }
+@keyframes cardUp { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: none; } }
+
+/* --- forgó energia-gyűrű a felszerelés hex-ikon mögött --- */
+.hexring { position: relative; }
+.hexring::before { content: ""; position: absolute; inset: -6px; border-radius: 50%; z-index: -1;
+  background: conic-gradient(from 0deg, transparent, rgba(var(--champ-rgb), .55), transparent 40%, rgba(var(--champ-rgb), .35), transparent 70%);
+  animation: ringSpin 6s linear infinite; filter: blur(2px); }
+@keyframes ringSpin { to { transform: rotate(360deg); } }
+
+/* --- pörgő hex-töltő --- */
+.spinner { border-top-color: var(--champ); box-shadow: 0 0 18px rgba(var(--champ-rgb), .35); }
+.spinner::after { content: ""; position: absolute; inset: -7px; border: 2px solid transparent; border-bottom-color: var(--champ2); border-radius: 50%; animation: spin 1.6s linear reverse infinite; }
+.placeholder .spinner { position: relative; }
+
+/* ---------------- TELJESÍTMÉNY-KAPU: meccs közben és visszafogott módban minden folyamatos animáció áll ---------------- */
+body.in-game .hero-img, body.fx-off .hero-img { animation: heroFade 1s ease-out both; transform: scale(1.06); }
+body.in-game #bgImg, body.fx-off #bgImg { animation: none; transform: none; }
+body.in-game .hero::before, body.fx-off .hero::before,
+body.in-game .hero::after, body.fx-off .hero::after,
+body.in-game .champ-name, body.fx-off .champ-name,
+body.in-game .glow, body.fx-off .glow, body.in-game #bg .glow.g3, body.fx-off #bg .glow.g3,
+body.in-game .btn.full, body.fx-off .btn.full,
+body.in-game .nav-btn.on::after, body.fx-off .nav-btn.on::after,
+body.in-game .status .dot::after, body.fx-off .status .dot::after,
+body.in-game .mtab.on::after, body.fx-off .mtab.on::after,
+body.in-game .hexring::before, body.fx-off .hexring::before,
+body.in-game .spinner::after, body.fx-off .spinner::after { animation: none !important; }
+/* a név maradjon olvasható, ha a csillanás ki van kapcsolva */
+body.in-game .champ-name, body.fx-off .champ-name { -webkit-text-fill-color: #fff; background: none; }
+body.in-game .hero::before, body.fx-off .hero::before { display: none; }
+/* belépő-stagger csak akkor, ha nem visszafogott; meccs közben halkabb */
+body.fx-off #content > *, body.fx-off #csContent > *, body.fx-off #igContent > *, body.fx-off #statsContent > * { animation: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-img, #bgImg, .hero::before, .hero::after, .champ-name, .glow, .btn.full,
+  .nav-btn.on::after, .status .dot::after, .mtab.on::after, .hexring::before, .spinner::after { animation: none !important; }
+}
