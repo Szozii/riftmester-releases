@@ -2,13 +2,13 @@
   "version": "3.9.5",
   "notes": "Őrszem: ha a program leáll (pl. alvás után), pár percen belül magától visszaindul.",
   "files": {
-    "OLVASS_EL.txt": "701bda00cb4d0c06fa2b8b35166a5a24351372fac5c8e4412546acd1fa12951f",
+    "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
     "rmcore_3_9_5.cp312-win_amd64.pyd": "df4317415c8d9f0e8e1d6a4cc448a3ed5c7e8c7056fb49669850e70243e904fc",
-    "server.py": "50a8276e4fde880ecccff31d7f715defd55409008f17b538dcab8e8955880249",
+    "server.py": "bf2de7fae44c80f1aca5cc62432f147fab05f302b6cfd2c1036cbb8c9dc91691",
     "web/app.js": "ea4429d0e1e0c2bb304a407526292333e4fa606124d0a2e0ff8aa2a425ea3e21",
-    "web/i18n.js": "40a27b6832cedba6c6e393873c9f6f46d884942e4124c6f1ec2fe22f536d5000",
-    "web/index.html": "f128e52fa73d1262658b8eefc5813bacc46ea698bd733b23e3490b0f7479f335",
-    "web/logo.svg": "b7496c8d4e6a34216ce033f6eea639b52c593726be5babb0d200bc11c846fe41",
-    "web/style.css": "f26a5dfea68a5d462676a5bdee2f881a0dc2a69cdbafeaf3c7831ea4ad9c6678"
+    "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
+    "web/index.html": "e11faf8e643276000813c2026d403b23d62852cbecf6dd5ea413320c28f5a448",
+    "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
+    "web/style.css": "1760b14f3bb4d1cd6f60b360ebd5e1e5cca8ba14c51f157fcb048d05caa1b1f2"
   }
 }
