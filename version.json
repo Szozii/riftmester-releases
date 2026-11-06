@@ -1,0 +1,16 @@
+{
+  "version": "3.9.0",
+  "notes": "",
+  "files": {
+    "server.py": "9aba681006857e0d84932d11eff62675ca34843a6cb5ae76c4cdab5487c6d77f",
+    "web/index.html": "e11faf8e643276000813c2026d403b23d62852cbecf6dd5ea413320c28f5a448",
+    "web/app.js": "3f87d1aabc770a63368b41a1308128185f9a07524bc5965c1b85eb6a8c6e8dd5",
+    "web/i18n.js": "311181faa639b84acd3672936860e3cc0bd9acd928138435d8bb4eccdaf03319",
+    "web/style.css": "1760b14f3bb4d1cd6f60b360ebd5e1e5cca8ba14c51f157fcb048d05caa1b1f2",
+    "OLVASS_EL.txt": "701bda00cb4d0c06fa2b8b35166a5a24351372fac5c8e4412546acd1fa12951f",
+    "INDITAS.bat": "966fb8cdc004d6f891e4858f953f27eda0d1ccd629c6d2cc5d546d2d7fdc8fa1",
+    "INDITAS_KONZOL_NELKUL.vbs": "3796e4dd295ed567b64fdc4590809e6deeb3c6f1ae1fa91c8dc457156ae2cd9a",
+    "make_manifest.py": "885f5b129b151f62e581491be9145a4cc90546908d4c5c9cc66560dfd152a751",
+    "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68"
+  }
+}

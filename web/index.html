@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>RiftMester</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="logo.svg">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=cinzel:600,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bg"><div id="bgImg"></div><div class="glow g1"></div><div class="glow g2"></div></div>
+
+<header class="topbar">
+  <div class="brand"><img src="logo.svg" alt=""><span>Rift<b>Mester</b></span></div>
+  <nav class="nav">
+    <button class="nav-btn" data-page="cs" data-i18n>Hősválasztás</button>
+    <button class="nav-btn on" data-page="build" data-i18n>Build</button>
+    <button class="nav-btn ig" data-page="ingame" hidden>In game</button>
+    <button class="nav-btn" data-page="stats" data-i18n>Statisztika</button>
+  </nav>
+  <div class="status" id="status" title=""><span class="dot"></span></div>
+  <button class="lang-btn" id="langBtn">HU</button>
+  <button class="icon-btn" id="openSettings" data-i18n-title="Beállítások" title="Beállítások">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+  </button>
+</header>
+<div class="statusline" id="statusText" data-i18n>Indulás…</div>
+
+<div id="banner"></div>
+
+<!-- ============ BUILD ============ -->
+<section class="page" id="page-build">
+  <div class="hero" id="hero">
+    <div class="hero-img" id="heroImg"></div>
+    <div class="hero-in">
+      <div class="hero-top"><div class="badges" id="badges"></div><div class="hero-wr" id="heroWr"></div></div>
+      <div class="hero-name">
+        <div class="champ-title" id="champTitle" data-i18n>Hősválasztáskor magától betöltődik</div>
+        <div class="champ-name" id="champName" data-i18n>Válassz hőst</div>
+      </div>
+      <div class="abil" id="heroAbil"></div>
+    </div>
+  </div>
+
+  <div class="favs" id="favs"></div>
+
+  <div class="mode-tabs" id="modeTabs"></div>
+
+  <div class="controls">
+    <div class="dd wide" id="ddChamp">
+      <button class="dd-btn"><span class="dd-label" data-i18n>Hős</span><span class="dd-value" id="ddChampVal" data-i18n>Keresés…</span><i class="chev"></i></button>
+      <div class="dd-menu">
+        <input type="text" id="champSearch" placeholder="Írd be a hős nevét…" data-i18n-ph="Írd be a hős nevét…" autocomplete="off">
+        <div class="dd-list" id="champList"></div>
+      </div>
+    </div>
+    <div class="dd" id="ddRole">
+      <button class="dd-btn"><span class="dd-label" data-i18n>Pozíció</span><span class="dd-value" id="ddRoleVal">Auto</span><i class="chev"></i></button>
+      <div class="dd-menu"><div class="dd-list" id="roleList"></div></div>
+    </div>
+    <div class="dd" id="ddRank">
+      <button class="dd-btn"><span class="dd-label" data-i18n>Rang adat</span><span class="dd-value" id="ddRankVal">Smaragd+</span><i class="chev"></i></button>
+      <div class="dd-menu"><div class="dd-list" id="rankList"></div></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="placeholder" id="placeholder"><div class="spinner"></div><p id="placeholderText" data-i18n>Adatok betöltése…</p></div>
+  </div>
+</section>
+
+<!-- ============ HŐSVÁLASZTÁS ============ -->
+<section class="page" id="page-cs" hidden>
+  <div id="csContent"></div>
+</section>
+
+<!-- ============ IN GAME ============ -->
+<section class="page" id="page-ingame" hidden>
+  <div id="igContent"></div>
+</section>
+
+<!-- ============ STATISZTIKA ============ -->
+<section class="page" id="page-stats" hidden>
+  <div id="statsContent"><div class="placeholder"><div class="spinner"></div><p data-i18n>Statisztika betöltése…</p></div></div>
+</section>
+
+<footer id="footer"></footer>
+
+<!-- ============ BEÁLLÍTÁSOK ============ -->
+<div class="drawer" id="settings" hidden>
+  <div class="drawer-in glass">
+    <div class="drawer-h"><h2 data-i18n>Beállítások</h2><button class="icon-btn" id="closeSettings" data-i18n-title="Bezárás" title="Bezárás">✕</button></div>
+    <div id="settingsBody"></div>
+  </div>
+</div>
+
+<div id="tooltip"></div>
+<div id="toast"></div>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
