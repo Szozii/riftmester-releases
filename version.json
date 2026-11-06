@@ -1,10 +1,10 @@
 {
-  "version": "3.9.6",
-  "notes": "Frissítés-javítás: egységes sortörés, az ellenőrzőösszegek mindig egyeznek.",
+  "version": "3.9.7",
+  "notes": "Az őrszem azonnal visszaindít a képernyő feloldásakor, és percenként ellenőriz.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_9_6.cp312-win_amd64.pyd": "1d4aaa52b59bf141ddfcfccb3ea8235282f6f04764c8789e1243e740d1a24736",
-    "server.py": "99c02141c4767f0f40c8bde2128889f5352a6bfd1665518e8096bd4c61e2fdb1",
+    "rmcore_3_9_7.cp312-win_amd64.pyd": "6f8f622f7be2775242dadcae9cda6c9892ca648f7ec25e06257fadfec771bdde",
+    "server.py": "5562a2cd82a9f97450e62cca8b83728c728266ba115c8e883be2d85febd68dd1",
     "web/app.js": "ea4429d0e1e0c2bb304a407526292333e4fa606124d0a2e0ff8aa2a425ea3e21",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "e11faf8e643276000813c2026d403b23d62852cbecf6dd5ea413320c28f5a448",
