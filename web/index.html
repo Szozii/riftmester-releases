@@ -14,18 +14,49 @@
 
 <header class="topbar">
   <div class="brand"><img src="logo.svg" alt=""><span>Rift<b>Mester</b></span></div>
-  <nav class="nav">
-    <button class="nav-btn" data-page="cs" data-i18n>Hősválasztás</button>
+  <nav class="nav topnav">
     <button class="nav-btn on" data-page="build" data-i18n>Build</button>
-    <button class="nav-btn ig" data-page="ingame" hidden>In game</button>
-    <button class="nav-btn" data-page="stats" data-i18n>Statisztika</button>
+    <button class="nav-btn" data-page="champions" data-i18n>Champions</button>
+    <button class="nav-btn" data-page="tierlist" data-i18n>Tier List</button>
+    <button class="nav-btn" data-page="meta" data-i18n>Meta</button>
+    <button class="nav-btn" data-page="esport" data-i18n>Esport</button>
   </nav>
-  <div class="status" id="status" title=""><span class="dot"></span></div>
-  <button class="lang-btn" id="langBtn">HU</button>
-  <button class="icon-btn" id="openSettings" data-i18n-title="Beállítások" title="Beállítások">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
-  </button>
+  <div class="top-right">
+    <div class="searchbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input type="text" id="topSearch" placeholder="Hős keresése…" data-i18n-ph="Hős keresése…" autocomplete="off"></div>
+    <div class="status" id="status" title=""><span class="dot"></span></div>
+    <button class="lang-btn" id="langBtn">HU</button>
+    <button class="icon-btn" id="openSettings" data-i18n-title="Beállítások" title="Beállítások">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+    </button>
+    <div class="avatar" title="RiftMester"><img src="logo.svg" alt=""></div>
+  </div>
 </header>
+
+<div class="shell">
+<aside class="sidebar">
+  <button class="side-btn nav-btn" data-page="build">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><span data-i18n>Build</span></button>
+  <button class="side-btn nav-btn" data-page="cs">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7z"/></svg><span data-i18n>Hősválasztás</span></button>
+  <button class="side-btn nav-btn ig" data-page="ingame" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="10" rx="4"/><path d="M7 11v2M6 12h2M15 12h.01M18 12h.01"/></svg><span data-i18n>In game</span></button>
+  <button class="side-btn nav-btn" data-page="stats">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span data-i18n>Statisztika</span></button>
+  <div class="side-sep"></div>
+  <button class="side-btn nav-btn" data-page="champions">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg><span data-i18n>Champions</span></button>
+  <button class="side-btn nav-btn" data-page="tierlist">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V8M10 20V4M16 20v-9M22 20H2"/></svg><span data-i18n>Tier List</span></button>
+  <button class="side-btn nav-btn" data-page="meta">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n>Meta</span></button>
+  <button class="side-btn nav-btn" data-page="favorites">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21C5 16 3 11.5 3 8.5 3 5.5 5.5 4 8 4c1.7 0 3.1.9 4 2.3C12.9 4.9 14.3 4 16 4c2.5 0 5 1.5 5 4.5 0 3-2 7.5-9 12.5z"/></svg><span data-i18n>Kedvencek</span></button>
+  <div class="side-spacer"></div>
+  <button class="side-btn" id="sideSettings">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8 2 2 0 1 1-2.8 2.8 1.7 1.7 0 0 0-2.9 1.2 2 2 0 1 1-4 0 1.7 1.7 0 0 0-2.9-1.2 2 2 0 1 1-2.8-2.8A1.7 1.7 0 0 0 4.6 15a2 2 0 1 1 0-4 1.7 1.7 0 0 0 1.5-2.9 2 2 0 1 1 2.8-2.8A1.7 1.7 0 0 0 11 4.6a2 2 0 1 1 4 0 1.7 1.7 0 0 0 2.9 1.5 2 2 0 1 1 2.8 2.8A1.7 1.7 0 0 0 19.4 11a2 2 0 1 1 0 4z"/></svg><span data-i18n>Beállítások</span></button>
+</aside>
+
+<div class="main">
 <div class="statusline" id="statusText" data-i18n>Indulás…</div>
 
 <div id="banner"></div>
@@ -86,7 +117,18 @@
   <div id="statsContent"><div class="placeholder"><div class="spinner"></div><p data-i18n>Statisztika betöltése…</p></div></div>
 </section>
 
+<!-- ============ HAMAROSAN ============ -->
+<section class="page" id="page-soon" hidden>
+  <div class="soon glass">
+    <div class="soon-ic"><img src="logo.svg" alt=""></div>
+    <h2 id="soonTitle">Hamarosan</h2>
+    <p id="soonText" data-i18n>Ez a rész hamarosan elkészül.</p>
+  </div>
+</section>
+
 <footer id="footer"></footer>
+</div><!-- /main -->
+</div><!-- /shell -->
 
 <!-- ============ BEÁLLÍTÁSOK ============ -->
 <div class="drawer" id="settings" hidden>
