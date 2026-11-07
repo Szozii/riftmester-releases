@@ -1,14 +1,14 @@
 {
-  "version": "3.10.3",
-  "notes": "Egységes bal oldali navigációs sáv; a felső sáv megszűnt (minden vezérlő balra került).",
+  "version": "3.10.4",
+  "notes": "Dizájn-finomítás: jeges-üveg panelek, ragyogó keretek, ikonos fejlécek – a tervhez közelítve.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_10_3.cp312-win_amd64.pyd": "599d9e98ca127f5b1590e07862eb6cc8311cac9ac77ad12f2524656418664892",
-    "server.py": "8456495f0a3d75f59598a84d87e1af19af8da57fe2d5ed290c06e6a66d969b17",
+    "rmcore_3_10_4.cp312-win_amd64.pyd": "52215b85907ee8e8f4819d05bf9640a1d81c0085432a18ae7fe3d879d8b1ce74",
+    "server.py": "4d0caf361055b4e3a25856ff1278f1bcb1722dcf41371a7a7f96b1ef11a5028e",
     "web/app.js": "0442fe1951db482f402f58defc890d3fc9c44edc99f5e06172ee66383d29646c",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "ec77755a647defd24e316506dd7d2f6ea864f14244cd35ce4e082701c9df0bd6",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "6f22d5435821ed31e53d54ec3e82b68ce7dfa3771158325947518827fc93be3f"
+    "web/style.css": "e6bc512b587f4dd6efb4d4d6b64093d7039b0fea0ef430ec37856e297046c705"
   }
 }

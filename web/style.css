@@ -986,3 +986,48 @@ body.fx-off #content > *, body.fx-off #csContent > *, body.fx-off #igContent > *
   .side-foot .avatar { margin-left: 0; }
 }
 @media (max-width: 760px) { .sidebar { width: 56px; } }
+
+/* ================================================================ v10 – dizájn finomítás (jeges-üveg, a terv szerint)
+   Tisztább, lekerekített panelek (sarokdíszek nélkül), erősebb fagyott-üveg, finomított fejlécek. */
+
+/* tisztább panelek: a régi sarokdíszek helyett lágy, ragyogó keret */
+.card::before, .card::after { display: none !important; }
+.card.glass, .loadout {
+  background: linear-gradient(180deg, rgba(20,32,54,.66), rgba(10,17,30,.72));
+  border: 1px solid rgba(var(--champ-rgb), .22);
+  border-radius: 14px;
+  backdrop-filter: blur(18px) saturate(1.25); -webkit-backdrop-filter: blur(18px) saturate(1.25);
+  box-shadow: 0 12px 34px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.06);
+}
+.card-h { padding: 13px 15px 11px; border-bottom: 1px solid rgba(255,255,255,.05); }
+.card-h .ico { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 8px;
+  background: rgba(var(--champ-rgb), .16); color: var(--champ); box-shadow: inset 0 0 0 1px rgba(var(--champ-rgb), .3); }
+.card-h h2 { font-family: var(--font-t); font-size: 14px; letter-spacing: .8px; text-transform: uppercase; }
+
+/* panel-fejléc apró felső fény-vonal a hős színével */
+.card.glass::after { content: ""; display: block !important; position: absolute; top: 0; left: 18px; right: 18px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(var(--champ-rgb), .6), transparent); }
+
+/* hős-banner: mélyebb jeges üveg-perem */
+.hero { border: 1px solid rgba(var(--champ-rgb), .45);
+  box-shadow: 0 26px 74px rgba(0,0,0,.6), inset 0 0 90px rgba(var(--champ-rgb), .08), inset 0 1px 0 rgba(255,255,255,.07); }
+
+/* címkék (Support/Tank/Patch): fényesebb jeges pirulák */
+.badge { background: rgba(10,18,32,.6); border: 1px solid rgba(var(--champ-rgb), .35); backdrop-filter: blur(6px); }
+.badge.acc { background: rgba(var(--champ-rgb), .18); border-color: rgba(var(--champ-rgb), .6); color: #fff; }
+
+/* mód-fülek: pirula sor, aktív kitöltve + ragyogás */
+.mode-tabs { background: rgba(10,16,28,.4); border: 1px solid var(--stroke); border-radius: 14px; padding: 5px; }
+.mtab { border-radius: 10px; color: var(--muted); }
+.mtab.on { color: #fff; }
+
+/* választók + gombok: finomított jeges felület */
+.dd-btn, .searchbox { background: rgba(12,20,34,.6); border: 1px solid var(--stroke); border-radius: 11px; }
+.dd-btn:hover { border-color: rgba(var(--champ-rgb), .5); }
+.btn { background: rgba(14,22,38,.7); border-radius: 10px; }
+
+/* oldalsáv: kicsit erősebb elválasztás a tartalomtól */
+.sidebar { border-right: 1px solid rgba(var(--champ-rgb), .14); }
+
+/* finom görgetősáv a hős színével */
+::-webkit-scrollbar-thumb { background: rgba(var(--champ-rgb), .3); }
