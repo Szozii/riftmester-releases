@@ -1,14 +1,14 @@
 {
-  "version": "3.10.0",
-  "notes": "Pixelhű váz a tervezett design szerint: bal oldali menüsáv + felső navigáció, kereső, profil; a kész oldalak működnek, a többi 'Hamarosan'.",
+  "version": "3.10.1",
+  "notes": "Champions böngésző: teljes hőslista kereséssel és szerep-szűrővel, kattintásra a hős buildje.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_10_0.cp312-win_amd64.pyd": "7932566966b24e1dfbf72f1526a7276379c758283223e39ac88a989231494f46",
-    "server.py": "fe6af8128a39f6fce5ae0b884afe5dddd164c9603d3cc4178fc9c6aa22da9ecc",
-    "web/app.js": "5b0c720f626e23556a6c540270915a012fe28d6e41151ba7e6dacaeec9e522a3",
+    "rmcore_3_10_1.cp312-win_amd64.pyd": "b60b2c3b9052e480ba11118ca669e9e0fff8794ae7bb70d5244bb4f60fb28cb2",
+    "server.py": "f3ef186c6d694f92aa661f39a8607d3bb248ba9d137ee56206b447be20055a09",
+    "web/app.js": "5c5ef3a15db6d767ece56e36e12e2024a73ba583d03279bae3115067f3b89d11",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
-    "web/index.html": "3a7795ce87a384728e0b311410eebc3243d0d20d58630f954c32be9872fcdbd4",
+    "web/index.html": "e01d4656bb8464890193117d34d8c97b06eec74fb18e949289d58995d04cebd1",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "9412280ec23df64d02c82620c9e4b845833dce2e40955e38fad9e625f666cbfe"
+    "web/style.css": "cdc37819faa7bd64f9080466ee3f1bb6f6eded29f2bc961532866f38c7d2076d"
   }
 }
