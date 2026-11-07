@@ -787,3 +787,68 @@ body.fx-off #content > *, body.fx-off #csContent > *, body.fx-off #igContent > *
   .hero-img, #bgImg, .hero::before, .hero::after, .champ-name, .glow, .btn.full,
   .nav-btn.on::after, .status .dot::after, .mtab.on::after, .hexring::before, .spinner::after { animation: none !important; }
 }
+
+/* ================================================================ v5 – széles dashboard (nagy, fix ablak)
+   A tartalom középre igazítva, a Build oldal több oszlopos irányítópult, nagy prémium hős-bannerrel.
+   A hős-színezés és a teljesítmény-kapuk érvényben maradnak. */
+.topbar, .statusline, #banner, .page { max-width: 1220px; margin-left: auto; margin-right: auto; width: 100%; }
+.topbar { border-radius: 0 0 16px 16px; }
+.page { padding: 14px 20px 22px; }
+.nav-btn { font-size: 13px; padding: 7px 15px; }
+.brand { font-size: 17px; } .brand img { width: 27px; height: 27px; }
+
+/* ---------- nagy hős-banner ---------- */
+.hero { height: 320px; margin: 2px 0 18px; border-radius: 18px; border: 1px solid rgba(var(--champ-rgb), .4);
+  box-shadow: 0 24px 70px rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.04), 0 0 0 1px rgba(var(--champ-rgb), .15); overflow: hidden; }
+.hero-img { background-position: 74% 18%; }
+.hero-img::after { background:
+  linear-gradient(90deg, rgba(5,8,15,.92) 0%, rgba(5,8,15,.55) 42%, rgba(5,8,15,0) 72%),
+  linear-gradient(0deg, var(--bg) 1%, rgba(5,8,15,.4) 34%, rgba(5,8,15,0) 62%); }
+.hero-in { padding: 22px 30px 24px; }
+.hero-top { align-items: flex-start; }
+.champ-title { font-size: 15px; letter-spacing: .3px; }
+.champ-name { font-size: 60px; letter-spacing: 1.5px; text-shadow: 0 3px 24px rgba(0,0,0,.9), 0 0 44px rgba(var(--champ-rgb), .45); }
+.badges { gap: 7px; margin-top: 10px; }
+.badge { font-size: 12px; padding: 5px 12px; border-radius: 22px; }
+.abil { gap: 9px; margin-top: 16px; }
+.ab { width: 50px; height: 50px; }
+.ab i { font-size: 10px; } .ab b { font-size: 10px; }
+
+/* winrate-gyűrű a fejlécben */
+.hero-wr { position: relative; width: 124px; height: 124px; margin: 4px 6px 0 0; display: block; text-align: center; }
+.hero-wr::before { content: ""; position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(var(--champ) calc(var(--p, 50) * 1%), rgba(255,255,255,.12) 0);
+  -webkit-mask: radial-gradient(farthest-side, transparent 62%, #000 64%); mask: radial-gradient(farthest-side, transparent 62%, #000 64%);
+  box-shadow: 0 0 26px rgba(var(--champ-rgb), .45); animation: wrSpinIn 1s ease-out both; }
+@keyframes wrSpinIn { from { transform: rotate(-90deg) scale(.9); opacity: 0; } to { transform: none; opacity: 1; } }
+.hero-wr b { position: absolute; inset: 0; display: grid; place-items: center; font: 800 32px/1 var(--font-d);
+  text-shadow: 0 2px 14px #000; }
+.hero-wr b.wr-good { color: #7ee0a6; } .hero-wr b.wr-mid { color: #f5d78a; } .hero-wr b.wr-bad { color: #f09aa6; }
+.hero-wr span { position: absolute; top: 102%; left: -20px; right: -20px; font-size: 11.5px; color: #c9d3e2; text-shadow: 0 1px 4px #000; white-space: nowrap; }
+
+/* ---------- mód-fülek + választók vízszintes sávban ---------- */
+.mode-tabs { gap: 8px; margin: 0 0 12px; }
+.mtab { flex: 1; padding: 11px 10px; font-size: 13px; border-radius: 10px; }
+.controls { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+.dd-btn { padding: 11px 14px; }
+
+/* ---------- a Build tartalma: két oszlopos irányítópult ---------- */
+#content { column-count: 2; column-gap: 16px; }
+#content > * { break-inside: avoid; margin-bottom: 16px; }
+#content > .note { break-inside: avoid; }
+.placeholder { column-span: all; }
+/* a két fő kártya (rúnák + tárgyak) legyen a tetején, egymás mellett – a többi alattuk folyik */
+.card { border-radius: 12px; }
+.card-h { padding: 12px 14px; }
+.card-h h2 { font-size: 15px; }
+
+/* keskenyebb ablaknál (ha valaki átméretezi) visszaáll egy oszlopra */
+@media (max-width: 820px) {
+  #content { column-count: 1; }
+  .controls { grid-template-columns: 1fr 1fr; }
+  .champ-name { font-size: 42px; }
+  .hero { height: 268px; }
+}
+
+/* a lapok (hősválasztás, in game, statisztika) is kapjanak levegőt a széles ablakban */
+#page-cs .cs-wrap, #page-ingame .ig-wrap { max-width: 100%; }

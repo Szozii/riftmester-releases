@@ -1,14 +1,14 @@
 {
-  "version": "3.9.8",
-  "notes": "Látványos 'gamer' design: mozgó hős-splash, animált gombok és effektek – meccs közben magától lenyugszik; új 'visszafogott animációk' kapcsoló.",
+  "version": "3.9.9",
+  "notes": "Teljesen új, széles 'gamer' dashboard: nagy hős-banner winrate-gyűrűvel, kétoszlopos elrendezés – a hős színére hangolva.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_9_8.cp312-win_amd64.pyd": "3bbe5b32aa26e617de211808af54fb08d1447b2b4282a89a161f494ee96a78b7",
-    "server.py": "fd1d23a14315a21f07c74cae0d3b369f54eb1b7f42c1f811a5b619eef0c72208",
-    "web/app.js": "e86bf6e26752389c386efa417e2e3425661d30367f344519b2be043e0e154d50",
+    "rmcore_3_9_9.cp312-win_amd64.pyd": "f479ee5908fea350a7f6cc62be45df191190c7333cd64d3240f36dfc1c158d2e",
+    "server.py": "36f35c33c6e99f7623ddfd7444eeeb849d2575f57b67b0d9b005b70e475b1e3b",
+    "web/app.js": "d3624db68bb820dcd83ea1e4816df0d3fd963d1fa369dc88b6713ceca91ca34b",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "07798f8fb49aac2bdac886a3854e471091adb05f64f6a91141266b1fe717b14f",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "229d7a0df78916e4ffb31388e3cc407a4ddd742a003c24f01853a41d5d284628"
+    "web/style.css": "c67fbe889861ed9ac07c7d34913467b3c98ffda06deca8d1a96474fcd0078099"
   }
 }
