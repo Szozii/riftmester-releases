@@ -1,14 +1,14 @@
 {
-  "version": "3.10.2",
-  "notes": "Tier List és Meta oldal: az összes hős rangsora U.GG nyerési ráta alapján, szereponként/rang szerint (patchenként cache-elve).",
+  "version": "3.10.3",
+  "notes": "Egységes bal oldali navigációs sáv; a felső sáv megszűnt (minden vezérlő balra került).",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_10_2.cp312-win_amd64.pyd": "259407ecb43bb2d4e6bbdbc6a112169df781cbfcc56431db59a7091a310df3b9",
-    "server.py": "f3f2c31b9d31109b240816ee0c54d4b762c9c61e163a2fbcca99bd3987e06b89",
-    "web/app.js": "e7dc6f57980336700d888015bdd93d05a925eed060adb577e11a137182b273cb",
+    "rmcore_3_10_3.cp312-win_amd64.pyd": "599d9e98ca127f5b1590e07862eb6cc8311cac9ac77ad12f2524656418664892",
+    "server.py": "8456495f0a3d75f59598a84d87e1af19af8da57fe2d5ed290c06e6a66d969b17",
+    "web/app.js": "0442fe1951db482f402f58defc890d3fc9c44edc99f5e06172ee66383d29646c",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
-    "web/index.html": "d61831e1b6c6f40ec1cd650f8f1647f4613784c2bafecd0a25ad5090ecb53d49",
+    "web/index.html": "ec77755a647defd24e316506dd7d2f6ea864f14244cd35ce4e082701c9df0bd6",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "ab9695a19db48b1c27c73c3c6f0a842d801731c6a425696d597e30f3112f4d84"
+    "web/style.css": "6f22d5435821ed31e53d54ec3e82b68ce7dfa3771158325947518827fc93be3f"
   }
 }

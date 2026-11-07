@@ -956,3 +956,33 @@ body.fx-off #content > *, body.fx-off #csContent > *, body.fx-off #igContent > *
 .tr-games i { position: absolute; left: 0; top: 0; bottom: 0; background: linear-gradient(90deg, rgba(var(--champ-rgb), .5), rgba(var(--champ-rgb), .2)); }
 .tr-games b { position: relative; font-size: 11.5px; color: #dbe4f0; font-variant-numeric: tabular-nums; margin-left: auto; }
 @media (max-width: 900px) { .tier-hr, .tier-row { grid-template-columns: 34px 34px 42px 1fr 60px 110px; } .tr-role { display: none; } .tier-hr span:nth-child(5){display:none} }
+
+/* ================================================================ v9 – egyetlen bal oldali sáv (nincs felső sáv)
+   Minden navigáció és vezérlő a bal sávban; a felső sáv megszűnt. */
+.topbar { display: none; }
+.shell { max-width: none; }
+.sidebar { position: sticky; top: 0; height: 100vh; width: 232px; padding: 16px 14px 14px;
+  background: linear-gradient(180deg, rgba(10,16,28,.6), rgba(6,10,18,.35)); }
+.side-brand { display: flex; align-items: center; gap: 9px; padding: 4px 8px 14px; font-family: var(--font-t); font-size: 19px; color: var(--gold2); letter-spacing: .3px; }
+.side-brand img { width: 28px; height: 28px; filter: drop-shadow(0 0 7px rgba(var(--champ-rgb), .5)); }
+.side-brand b { color: var(--gold); font-weight: 800; }
+.side-search { width: 100%; margin: 0 0 12px; }
+.side-foot { display: flex; align-items: center; gap: 10px; padding: 12px 8px 4px; margin-top: 8px; border-top: 1px solid var(--stroke); }
+.side-foot .status { margin: 0; }
+.side-foot .lang-btn { margin: 0; }
+.side-foot .avatar { margin-left: auto; width: 32px; height: 32px; border-radius: 50%; overflow: hidden; border: 1.5px solid rgba(var(--champ-rgb), .6); background: #0a1120; }
+.side-foot .avatar img { width: 100%; height: 100%; padding: 6px; }
+.main { padding-top: 0; }
+.main .page { padding-top: 18px; }
+/* a státusz-pont a sávban */
+.side-foot .status .dot { width: 9px; height: 9px; }
+
+@media (max-width: 1040px) {
+  .sidebar { width: 64px; }
+  .side-brand span { display: none; }
+  .side-brand { justify-content: center; padding: 4px 0 12px; }
+  .side-search { display: none; }
+  .side-foot { flex-direction: column; gap: 8px; }
+  .side-foot .avatar { margin-left: 0; }
+}
+@media (max-width: 760px) { .sidebar { width: 56px; } }
