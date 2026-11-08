@@ -1,14 +1,14 @@
 {
-  "version": "3.10.5",
-  "notes": "Hibajavítások: a dizájn hős nélkül is látszik; a tárgy-ikonok torzulása megszűnt; a Meta és Tier List külön dobozt kapott.",
+  "version": "3.10.6",
+  "notes": "Dizájn-átdolgozás: élő animált aurora-háttér, körbefutó fény-keret, a hős egyedi színe a fő akcentus mindenhol; a Tier List winrate színe javítva.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_10_5.cp312-win_amd64.pyd": "7db928be3b102b0f630a3d5a68c1cb6be3f73cbdd4622f9cd9a07939ee9dec7b",
-    "server.py": "ae003938968526ec3d2065a755e288d92c4c8ad96465888acb09ffb06014a523",
+    "rmcore_3_10_6.cp312-win_amd64.pyd": "52495e0d2ce13b9b8a0659c4df4ed05d1f1a18d449bf4be1881b13e1eac081a5",
+    "server.py": "a7cf796470b26ec8e72d3d7eaa72f18dd09c7e5a07fb937a351a02b85112b557",
     "web/app.js": "f997e426eeb313e568f789dcc85fcacae0a180929df177f2325462f18a560119",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
-    "web/index.html": "4ec8bc5ba40345d15c6aa7e86267520a49339f204470c38fdac29881bc500e33",
+    "web/index.html": "caf072c722d43e0ecdb50de2e4867e5adf2bdc6d2dd62e5d905dad9010ddf6ec",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "18a5372c9f0a4245153ee00e8a104616c4197ee57cede9e65e06e3708cf4635b"
+    "web/style.css": "bb6b30f6362e087912521f50b736a6da26af52dbc96aaad4f1ecfabbf8c35c99"
   }
 }
