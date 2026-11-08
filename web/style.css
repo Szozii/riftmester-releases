@@ -1281,3 +1281,11 @@ body.fx-off .lp-chart svg path[stroke] { animation: none; stroke-dashoffset: 0; 
 .es-favtag { margin-left: 6px; color: #ffcf45; font-size: 11px; }
 .es-when { display: inline-flex; align-items: center; }
 body.fx-off .nav-badge.live { animation: none; }
+
+/* ================================================================ v17 – egyedi akcentszín választó */
+.accent-ctl { display: inline-flex; align-items: center; gap: 8px; }
+.accent-ctl input[type="color"] { width: 38px; height: 32px; padding: 2px; border: 1px solid var(--line);
+  border-radius: 8px; background: rgba(255,255,255,.04); cursor: pointer; }
+.accent-ctl input[type="color"]:disabled { opacity: .35; cursor: not-allowed; }
+.accent-ctl input[type="color"]::-webkit-color-swatch { border: none; border-radius: 5px; }
+.accent-ctl input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
