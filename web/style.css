@@ -1295,3 +1295,11 @@ body.fx-off .nav-badge.live { animation: none; }
 .sm-empty { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 14px; text-align: center; padding: 24px; color: var(--muted); }
 .sm-empty p { margin: 0; font-size: 14px; }
+
+/* ================================================================ v19 – build-path: ne lógjon ki (reszponzív oszlopok + ikon) */
+.path { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px; }
+.slot { min-width: 0; padding-left: 1px; padding-right: 1px; }
+.slot .ic.main { width: 100%; max-width: 54px; height: auto; aspect-ratio: 1 / 1; margin: 0 auto; }
+.slot .alts { max-width: 100%; justify-content: center; flex-wrap: wrap; }
+.slot .alts .ic { width: 22px; height: 22px; }
+.slot .nm { width: 100%; }

@@ -1,14 +1,14 @@
 {
-  "version": "3.14.2",
-  "notes": "Javítások: a saját build tárgykeresőjében nincs többé duplikált tétel (csak Summoner's Rift tárgyak, név szerint egyszer); az esport stream mostantól a beépített ablakban nyílik, nem ugrik böngészőbe; az esport sor elrendezése javítva – a 'vs' jól látszik, a kedvenc-csillagok a sor két szélén, egységes távolsággal.",
+  "version": "3.14.3",
+  "notes": "Javítás: a Tárgyak kártyán a build-útvonal már nem lóg ki jobbra – a 6 tárgy reszponzívan a kártyához igazodik (kisebb kijelzőn is).",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_14_2.cp312-win_amd64.pyd": "95864b1e36edd430ee16d213bf2cffe6205759474100ece6c43d765809860042",
-    "server.py": "d0de5bff07c6def15c59b5aa67bba339bd81d7721318398d90105675494d3371",
+    "rmcore_3_14_3.cp312-win_amd64.pyd": "42b2d691d05666d09740c344c6017462ef2eed47f92a1d1d3076eaa554837929",
+    "server.py": "9c4bbd7c69029d6e774e7ae3e01838edbc79e76aba4ecb72b2e5c4cd2df447c9",
     "web/app.js": "6ddffea162b1365cb4e3a1d2a6db864ccb4c386243f3f73bfeacbd3a34d6adf3",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "62eb4b9c80c92847edaccc45cc14e4362d66ba80337aadb1bc29264b33027faa",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "1acd43fb4d7fb32fa2522d16717dd2f6f58cd4815d68654d17798c60f30434da"
+    "web/style.css": "ca282a93aa4c7a1d267a97b7ec1a55618d967104268911fbb868776e0ef14fab"
   }
 }
