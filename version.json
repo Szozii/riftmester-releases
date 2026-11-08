@@ -1,14 +1,14 @@
 {
-  "version": "3.11.0",
-  "notes": "Rang-/LP-követő: a statisztika oldalon grafikon mutatja a Solo/Duo és Flex LP alakulását (mostantól gyűjti az adatot); Mayhem fül eltávolítva a statisztikából.",
+  "version": "3.12.0",
+  "notes": "Saját build-mentő: a Build oldalon elmentheted a saját rúnáidat, statmodjaidat, idézőigéidet és tárgyaidat hősönként/szerepenként – lezáráskor ezt tölti be a U.GG helyett, és bármikor visszaállítható.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_11_0.cp312-win_amd64.pyd": "520cd86f92b7e8b052d17e886b64a26f5fe050de1657c576981bf651fcd2603a",
-    "server.py": "f49be92726fad7fa0f0e06543816599794d3095201256d82510cdf227c1ad1b9",
-    "web/app.js": "f445c39cf47b9040a23546500612bee18ee36456c3f4985c8743e13837cd2d45",
+    "rmcore_3_12_0.cp312-win_amd64.pyd": "8ab9567fc8f4402dcaf21e9285dca77c051a8d934473f045bf856159e4363485",
+    "server.py": "40d704b4e81ab827bf51e20a2aec2fd3fe2b5659c567559bafa8f75aa92cbdd9",
+    "web/app.js": "f5e02dd343b045e3d2162aeefacd3eccc9bcaee889a1f99457cb1a47e016b43d",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "dab0628cbd7c2d5c0af6b9374661a00afae14205debbd3f5430f74211dc8e5e1",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "9340a64028a621eb3150832c8502c141c09ca25ee5f70e0dd7812bed7c4390a9"
+    "web/style.css": "bd4e13c1adc8b3d4a409c2c2c003ffb9194900aca86cf081da7b4dd68b3cd2ae"
   }
 }
