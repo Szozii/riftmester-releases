@@ -1,14 +1,14 @@
 {
-  "version": "3.12.0",
-  "notes": "Saját build-mentő: a Build oldalon elmentheted a saját rúnáidat, statmodjaidat, idézőigéidet és tárgyaidat hősönként/szerepenként – lezáráskor ezt tölti be a U.GG helyett, és bármikor visszaállítható.",
+  "version": "3.13.0",
+  "notes": "Esport kedvenc csapatok: csillagozd a csapataidat az Esport fülön – a meccseik felülre kerülnek, és asztali értesítést/jelzést kapsz, amikor élőben játszanak (a bal menüben jelző pötty). Kapcsolható a Beállításokban.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_12_0.cp312-win_amd64.pyd": "8ab9567fc8f4402dcaf21e9285dca77c051a8d934473f045bf856159e4363485",
-    "server.py": "40d704b4e81ab827bf51e20a2aec2fd3fe2b5659c567559bafa8f75aa92cbdd9",
-    "web/app.js": "f5e02dd343b045e3d2162aeefacd3eccc9bcaee889a1f99457cb1a47e016b43d",
+    "rmcore_3_13_0.cp312-win_amd64.pyd": "c56d4373336a2063c5e6bc810eec805b73dcc466a41c3129218efbaba0d6571e",
+    "server.py": "9353ba66e4a31d44d3f8aa5fa745a8351115cd232dd30871f5e9e1d136d4d69a",
+    "web/app.js": "4139f1fdbc202f5bce0715c8d974e5cd78e7b7adba484f3b2c7bfd22a85f1fd1",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
-    "web/index.html": "dab0628cbd7c2d5c0af6b9374661a00afae14205debbd3f5430f74211dc8e5e1",
+    "web/index.html": "62eb4b9c80c92847edaccc45cc14e4362d66ba80337aadb1bc29264b33027faa",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "bd4e13c1adc8b3d4a409c2c2c003ffb9194900aca86cf081da7b4dd68b3cd2ae"
+    "web/style.css": "88c41460a96fbc1c840a1770648d76d42c4abbd0a261f378c171e06520a1b071"
   }
 }
