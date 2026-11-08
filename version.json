@@ -1,14 +1,14 @@
 {
-  "version": "3.10.7",
-  "notes": "Tier/Meta rendezés (WR/meccsek/tier); Kedvencek szív-gombbal a Champions oldalról; Esport menetrend (közelgő meccsek, kattintásra stream); Mayhem fül eltávolítva.",
+  "version": "3.10.8",
+  "notes": "Szerep-szűrő javítva (csak az adott szerep fő hősei); esport csapat-logók; a stream az appon belül nyílik meg (nem böngészőben).",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_10_7.cp312-win_amd64.pyd": "39bab58157498156f0d235f12af7499138c460a9a3f1be4359a6206caa88ce27",
-    "server.py": "9405767cdadc51a61977198e09d739283eafe9839b9d1e7ce4f9982b38a6a0f6",
-    "web/app.js": "e1de2ea4fc42e0425bbdcf47b8379dca873d041f2dd95f6312c7926ae963dbf5",
+    "rmcore_3_10_8.cp312-win_amd64.pyd": "10b8241cad212937d73f59823f2805592f0f44c05a7e6e034bf0d108022690bd",
+    "server.py": "00a0a3f9f0e6e32f9da9015278cfdaccbe0989e8cfb86655d47f2373c68ec044",
+    "web/app.js": "66511efeff0d523f61cc14d58273af697db523c30b468c1cc9cba4fd13fa17dd",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "dab0628cbd7c2d5c0af6b9374661a00afae14205debbd3f5430f74211dc8e5e1",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "916e5d37ee5668148299898e68e454de74d8b74a0c921ff647b7588738d12cde"
+    "web/style.css": "407c37e203d56791562d244cb9584cc550dc6b135a034aa2453781e52716de8e"
   }
 }
