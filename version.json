@@ -1,14 +1,14 @@
 {
-  "version": "3.10.9",
-  "notes": "Rendezés: WR és Meccsek (a felesleges Tier rendezés kivéve, mert az a WR-rel azonos); esport csapat-logók közvetlen betöltéssel (a proxy nem engedte át).",
+  "version": "3.11.0",
+  "notes": "Rang-/LP-követő: a statisztika oldalon grafikon mutatja a Solo/Duo és Flex LP alakulását (mostantól gyűjti az adatot); Mayhem fül eltávolítva a statisztikából.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_10_9.cp312-win_amd64.pyd": "69a888b154afd332c6b80168f1ca17823f47369a351d4fafab09b2340a055f20",
-    "server.py": "ccae6110ddeb13614008e65579b3eeb2deb0fd6767d70304b0d03f90fe79566a",
-    "web/app.js": "c6232b71e258e56737facc74aa37cd4211b4d485f5860d751febd627cfd05f7f",
+    "rmcore_3_11_0.cp312-win_amd64.pyd": "520cd86f92b7e8b052d17e886b64a26f5fe050de1657c576981bf651fcd2603a",
+    "server.py": "f49be92726fad7fa0f0e06543816599794d3095201256d82510cdf227c1ad1b9",
+    "web/app.js": "f445c39cf47b9040a23546500612bee18ee36456c3f4985c8743e13837cd2d45",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "dab0628cbd7c2d5c0af6b9374661a00afae14205debbd3f5430f74211dc8e5e1",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "407c37e203d56791562d244cb9584cc550dc6b135a034aa2453781e52716de8e"
+    "web/style.css": "9340a64028a621eb3150832c8502c141c09ca25ee5f70e0dd7812bed7c4390a9"
   }
 }

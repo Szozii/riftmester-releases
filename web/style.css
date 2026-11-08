@@ -1161,3 +1161,22 @@ body.in-game #bg::before, body.fx-off #bg::before { animation: none !important; 
 .sm-video { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; }
 .sm-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 @media (max-width: 640px) { .es-bg { display: none; } }
+
+/* ================================================================ v14 – LP / rang-követő grafikon */
+.lp-card { padding: 16px 18px; margin: 14px 0 0; }
+.lp-h { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.lp-h b { font-size: 15px; letter-spacing: .2px; }
+.lp-toggle { display: inline-flex; gap: 4px; background: rgba(255,255,255,.04); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+.lp-tg { padding: 4px 13px; border: 0; background: transparent; color: var(--muted); font-size: 12.5px; font-weight: 600; border-radius: 999px; cursor: pointer; transition: .18s; }
+.lp-tg:hover { color: #fff; }
+.lp-tg.on { background: rgba(var(--champ-rgb), .22); color: #fff; box-shadow: 0 0 0 1px rgba(var(--champ-rgb), .45) inset; }
+.lp-chart { width: 100%; }
+.lp-chart svg { width: 100%; height: 170px; display: block; overflow: visible; }
+.lp-chart svg path[stroke] { filter: drop-shadow(0 0 6px rgba(var(--champ-rgb), .5)); animation: lpDraw 1.1s ease forwards; stroke-dasharray: 2200; stroke-dashoffset: 0; }
+@keyframes lpDraw { from { stroke-dashoffset: 2200; } to { stroke-dashoffset: 0; } }
+.lp-chart svg circle { opacity: .85; }
+.lp-ax { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12.5px; color: var(--muted); font-weight: 600; }
+.lp-empty { padding: 20px 4px 8px; font-size: 13px; line-height: 1.5; }
+.lp-link { color: var(--champ); cursor: pointer; font-weight: 600; }
+.lp-link:hover { text-decoration: underline; }
+body.fx-off .lp-chart svg path[stroke] { animation: none; stroke-dashoffset: 0; }
