@@ -14,6 +14,10 @@
   --dim: #56647c;
   --good: #34d399;
   --mid: #f5c451;
+  /* a hős színe – alapértelmezett jeges-kék, amíg nincs témázott hős (különben eltűnne a dizájn) */
+  --champ: #3db5e6;
+  --champ2: #0ac8b9;
+  --champ-rgb: 61, 181, 230;
   --bad: #fb7185;
   --ap: #a78bfa;
   --ad: #fb923c;
@@ -884,7 +888,7 @@ body.fx-off #content > *, body.fx-off #csContent > *, body.fx-off #igContent > *
 .side-btn.ig[hidden] { display: none; }
 .side-btn.ig { color: #ffd68c; }
 
-.main { flex: 1 1 auto; min-width: 0; }
+.appmain { flex: 1 1 auto; min-width: 0; }
 .statusline, #banner { max-width: none; margin: 0; }
 .page { max-width: none; margin: 0; padding: 16px 24px 26px; }
 #footer { padding: 10px 24px 20px; }
@@ -972,8 +976,8 @@ body.fx-off #content > *, body.fx-off #csContent > *, body.fx-off #igContent > *
 .side-foot .lang-btn { margin: 0; }
 .side-foot .avatar { margin-left: auto; width: 32px; height: 32px; border-radius: 50%; overflow: hidden; border: 1.5px solid rgba(var(--champ-rgb), .6); background: #0a1120; }
 .side-foot .avatar img { width: 100%; height: 100%; padding: 6px; }
-.main { padding-top: 0; }
-.main .page { padding-top: 18px; }
+.appmain { padding-top: 0; }
+.appmain .page { padding-top: 18px; }
 /* a státusz-pont a sávban */
 .side-foot .status .dot { width: 9px; height: 9px; }
 

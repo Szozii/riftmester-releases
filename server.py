@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # RiftMester – (c) Szozii. Minden jog fenntartva. All rights reserved.
-# A program lefordított magja: rmcore_3_10_4.cp312-win_amd64.pyd
-VERSION = "3.10.4"
-CORE = "rmcore_3_10_4"
+# A program lefordított magja: rmcore_3_10_5.cp312-win_amd64.pyd
+VERSION = "3.10.5"
+CORE = "rmcore_3_10_5"
 
 if __name__ == "__main__":
     import importlib, os, sys, glob, re
