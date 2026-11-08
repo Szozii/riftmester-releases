@@ -1,14 +1,14 @@
 {
-  "version": "3.14.0",
-  "notes": "Egyedi akcentszín: a Beállításokban választhatsz fix kiemelő színt a hőshöz igazodó helyett. Plusz: a csak-rúnát mentő saját build megtartja a U.GG tárgyakat, és apró stabilitási javítás a tier listában.",
+  "version": "3.14.1",
+  "notes": "Javítás: a saját build szerkesztőben most helyesen betöltődnek a tárgy- és ige-ikonok (verziós ddragon út); az esport fülön a kedvenc-csillag jóval nagyobb és könnyebben kattintható.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_14_0.cp312-win_amd64.pyd": "cf8b6e2d4a406f9d88f45cc9223b85978d1fb9871cc34e99c632b5f323590b02",
-    "server.py": "f5d6c0bb13840a4fff139a3fefb9ffe936d8a8ffbc1e3c8d116ffa2d459df36e",
-    "web/app.js": "4efb1d2e3c98f3a9a223028c2a2f531b09c1dfd9686941366db2c8b730d32423",
+    "rmcore_3_14_1.cp312-win_amd64.pyd": "587de71762302a60860d6271969efde1ffd9fd24956e7e07022bcfdca6972940",
+    "server.py": "1eabab23aa3ce70d8b257ea0ea0fb874dc2a3a3d654473cea704ccc3e9e97583",
+    "web/app.js": "d352fb5f2c4af42332d8e0905a3e8d534af95747db1c27b770e9c446a239fe44",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "62eb4b9c80c92847edaccc45cc14e4362d66ba80337aadb1bc29264b33027faa",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "2c3cab09157982245d4881e73752c1b24ba16a50c58d8d2d261dc4ab0f41bd88"
+    "web/style.css": "1d25fb4aad5429d99f00ae59b7e6d2ab3f8a4e31bc7c2f35511fcc39f2c84660"
   }
 }
