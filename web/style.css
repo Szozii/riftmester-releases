@@ -532,7 +532,9 @@ select.set-input { cursor: pointer; }
 .sp span { display: block; font-size: 9.5px; color: var(--muted); margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .lo-minor { display: flex; align-items: center; gap: 6px; margin: 12px 0 2px; padding: 8px 10px; border-radius: 10px; background: rgba(0,0,0,.28); }
 .lo-minor img { width: 30px; height: 30px; cursor: help; }
-.lo-minor img.tree { width: 22px; height: 22px; opacity: .85; }
+.lo-tree { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--champ-rgb), .22), rgba(255,255,255,.05)); border: 1px solid rgba(255,255,255,.12); }
+.lo-minor img.tree { width: 20px; height: 20px; opacity: 1; filter: drop-shadow(0 0 2px rgba(0,0,0,.6)); }
 .lo-minor .sep { width: 1px; height: 24px; background: rgba(255,255,255,.12); margin: 0 3px; }
 .lo-max { display: flex; align-items: center; gap: 7px; margin-top: 10px; flex-wrap: wrap; }
 .lo-max .lbl { font-size: 10px; color: var(--muted); margin-right: 2px; }
@@ -1303,3 +1305,21 @@ body.fx-off .nav-badge.live { animation: none; }
 .slot .alts { max-width: 100%; justify-content: center; flex-wrap: wrap; }
 .slot .alts .ic { width: 22px; height: 22px; }
 .slot .nm { width: 100%; }
+
+/* ================================================================ v20 – szerkeszthető rúnalap + statmod rács */
+.rune { cursor: pointer; }
+.rune:hover { filter: brightness(1.15); transform: scale(1.06); }
+.redit-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  margin: 0 0 10px; padding: 8px 11px; border-radius: 10px; font-size: 12px; color: var(--muted);
+  background: rgba(0,0,0,.25); border: 1px solid var(--line); }
+.redit-bar.on { color: #fff; border-color: rgba(var(--champ-rgb), .55);
+  background: linear-gradient(120deg, rgba(var(--champ-rgb), .14), rgba(255,255,255,.02)); }
+.redit-act { display: inline-flex; gap: 7px; }
+.shard-rows { display: flex; flex-direction: column; gap: 7px; margin-top: 12px; }
+.shard-row { display: flex; gap: 8px; justify-content: center; }
+.shard-opt { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: rgba(0,0,0,.3);
+  display: grid; place-items: center; cursor: pointer; padding: 0; transition: .15s; filter: grayscale(.55) brightness(.72); }
+.shard-opt img { width: 22px; height: 22px; }
+.shard-opt .sh-fallback { font-size: 11px; color: var(--muted); }
+.shard-opt:hover { filter: grayscale(.15) brightness(1); transform: scale(1.08); }
+.shard-opt.on { border-color: var(--champ); filter: none; box-shadow: 0 0 10px -2px rgba(var(--champ-rgb), .85); background: rgba(var(--champ-rgb), .12); }
