@@ -1,14 +1,14 @@
 {
-  "version": "3.10.6",
-  "notes": "Dizájn-átdolgozás: élő animált aurora-háttér, körbefutó fény-keret, a hős egyedi színe a fő akcentus mindenhol; a Tier List winrate színe javítva.",
+  "version": "3.10.7",
+  "notes": "Tier/Meta rendezés (WR/meccsek/tier); Kedvencek szív-gombbal a Champions oldalról; Esport menetrend (közelgő meccsek, kattintásra stream); Mayhem fül eltávolítva.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_10_6.cp312-win_amd64.pyd": "52495e0d2ce13b9b8a0659c4df4ed05d1f1a18d449bf4be1881b13e1eac081a5",
-    "server.py": "a7cf796470b26ec8e72d3d7eaa72f18dd09c7e5a07fb937a351a02b85112b557",
-    "web/app.js": "f997e426eeb313e568f789dcc85fcacae0a180929df177f2325462f18a560119",
+    "rmcore_3_10_7.cp312-win_amd64.pyd": "39bab58157498156f0d235f12af7499138c460a9a3f1be4359a6206caa88ce27",
+    "server.py": "9405767cdadc51a61977198e09d739283eafe9839b9d1e7ce4f9982b38a6a0f6",
+    "web/app.js": "e1de2ea4fc42e0425bbdcf47b8379dca873d041f2dd95f6312c7926ae963dbf5",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
-    "web/index.html": "caf072c722d43e0ecdb50de2e4867e5adf2bdc6d2dd62e5d905dad9010ddf6ec",
+    "web/index.html": "dab0628cbd7c2d5c0af6b9374661a00afae14205debbd3f5430f74211dc8e5e1",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "bb6b30f6362e087912521f50b736a6da26af52dbc96aaad4f1ecfabbf8c35c99"
+    "web/style.css": "916e5d37ee5668148299898e68e454de74d8b74a0c921ff647b7588738d12cde"
   }
 }
