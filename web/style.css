@@ -1385,3 +1385,129 @@ body.fx-off .nav-badge.live { animation: none; }
 .try-c .wr { font-size: 11px; }
 .tiny-tier { position: absolute; top: 5px; right: 5px; font-style: normal; font-weight: 800; font-size: 9.5px;
   padding: 1px 5px; border-radius: 5px; background: rgba(0,0,0,.5); border: 1px solid currentColor; line-height: 1.3; }
+
+/* ================================================================ v26 – Hextech arculat
+   Éles sarkok, arany hajszálkeret, Cinzel címek, hex-rács háttér, egységes SVG-ikonok.
+   A hős színe (--champ) marad az egyetlen élő akcentus. */
+:root {
+  --font: "Sora", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --font-d: "Cinzel", "Trajan Pro", Georgia, serif;
+  --r: 3px;
+  --hair: rgba(200, 170, 110, .22);
+  --hair2: rgba(200, 170, 110, .5);
+}
+body { font-feature-settings: "tnum" 1; -webkit-font-smoothing: antialiased; letter-spacing: .005em; }
+::selection { background: rgba(var(--champ-rgb), .4); color: #fff; }
+input, textarea { caret-color: var(--gold); }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #a68b52, #6e5a30); border-radius: 0; border: 2px solid var(--bg); }
+.i { width: 15px; height: 15px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; vertical-align: -2px; }
+.i.fill { fill: currentColor; }
+
+/* háttér: a hős festménye marad, de hex-rács vonalakkal – a ragyogó foltok nincsenek */
+.glow { display: none; }
+#bg::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: .9;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66 0 50V16L28 0l28 16v34zM28 66v34' fill='none' stroke='%23c8aa6e' stroke-opacity='.055'/%3E%3Cpath d='M28 0v-0M0 84l28 16 28-16' fill='none' stroke='%23c8aa6e' stroke-opacity='.055'/%3E%3C/svg%3E");
+  -webkit-mask-image: radial-gradient(120% 90% at 70% 0%, #000 0%, transparent 75%); mask-image: radial-gradient(120% 90% at 70% 0%, #000 0%, transparent 75%); }
+#bgImg { filter: blur(14px) saturate(1.15); opacity: .3; }
+
+/* panelek: tömör sötét felület, arany hajszál, nincs üveg-elmosás */
+.glass, .card.glass, .loadout { backdrop-filter: none; -webkit-backdrop-filter: none; border-radius: var(--r);
+  background: linear-gradient(180deg, rgba(14, 23, 40, .96), rgba(8, 14, 25, .97));
+  border: 1px solid var(--hair);
+  box-shadow: 0 16px 30px -16px rgba(0, 0, 0, .8), inset 0 1px 0 rgba(255, 255, 255, .035); }
+.card { margin-bottom: 12px; }
+/* sarokjelek: bal-felső + jobb-alsó, a hős színében */
+.card::before, .card::after { display: block !important; content: ""; position: absolute; width: 13px; height: 13px; pointer-events: none; z-index: 2;
+  top: auto; left: auto; right: auto; bottom: auto; height: 13px; background: none; border-radius: 0; }
+.card.glass::before { width: 13px; height: 13px; top: -1px; left: -1px; border-top: 2px solid var(--champ); border-left: 2px solid var(--champ); }
+.card.glass::after { top: auto; left: auto; width: 13px; height: 13px; background: none; bottom: -1px; right: -1px; border-bottom: 2px solid var(--champ); border-right: 2px solid var(--champ); }
+.card-h { padding: 12px 15px 11px; border-bottom: 0; position: relative; }
+.card-h::after { content: ""; position: absolute; left: 15px; right: 15px; bottom: 0; height: 1px;
+  background: linear-gradient(90deg, var(--hair2), var(--hair) 40%, transparent); }
+.card.collapsed .card-h::after { display: none; }
+.card-h .ico { width: 28px; height: 28px; border-radius: 0; background: rgba(var(--champ-rgb), .2); color: var(--gold2); box-shadow: none; font-size: 0;
+  clip-path: polygon(25% 4%, 75% 4%, 100% 50%, 75% 96%, 25% 96%, 0 50%); }
+.card-h .ico .i { width: 14px; height: 14px; }
+.card-h .ico img { border-radius: 0; }
+.card-h h2 { font-family: var(--font-d); font-size: 12.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--gold2); }
+.card-h .meta { font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+
+/* oldalsáv: lapos menü, bal oldali jelzősáv az aktív elemen */
+.sidebar { background: linear-gradient(180deg, rgba(8, 13, 23, .92), rgba(5, 9, 16, .88)); border-right: 1px solid var(--hair); }
+.side-brand { font-family: var(--font-d); letter-spacing: .1em; font-size: 17px; text-transform: none; }
+.side-brand img { filter: none; }
+.sidebar .nav-btn { border-radius: 2px; box-shadow: none; transform: none; font-size: 12.5px; font-weight: 600; letter-spacing: .03em; padding: 9px 12px; background: none; }
+.sidebar .nav-btn:hover { background: rgba(200, 170, 110, .07); color: var(--text); transform: none; }
+.sidebar .nav-btn.on { color: var(--gold2); box-shadow: none; background: linear-gradient(90deg, rgba(var(--champ-rgb), .18), rgba(var(--champ-rgb), 0) 90%); }
+.sidebar .nav-btn.on::after { content: ""; position: absolute; left: 0; right: auto; top: 6px; bottom: 6px; width: 2px; height: auto; border-radius: 0; background: var(--champ); box-shadow: none; animation: none; }
+.sidebar .nav-btn svg { opacity: .85; }
+.side-search, .sidebar input { border-radius: 2px; }
+
+/* hős-banner: arany hajszál + Hextech-elválasztó rombusszal */
+.hero { border-radius: 0; border: 0; border-bottom: 1px solid var(--hair2); box-shadow: none; }
+.hero::after { content: ""; position: absolute; left: 50%; bottom: -6px; width: 11px; height: 11px; z-index: 3; transform: translateX(-50%) rotate(45deg);
+  background: var(--bg); border: 1px solid var(--gold); }
+.champ-name { font-family: var(--font-d); font-weight: 900; letter-spacing: .04em; }
+.champ-title { letter-spacing: .12em; text-transform: uppercase; font-size: 11px; color: var(--gold); }
+.hero-wr b { font-family: var(--font-d); }
+
+/* címkék, gombok, fülek: éles sarok, hajszál-keret */
+.badge { border-radius: 2px; backdrop-filter: none; background: rgba(6, 11, 20, .78); border: 1px solid var(--hair); letter-spacing: .04em; font-weight: 600; }
+.badge.acc, .badge.mine { background: rgba(var(--champ-rgb), .16); border-color: rgba(var(--champ-rgb), .55); color: #fff; }
+.badge .i { width: 12px; height: 12px; }
+.btn { border-radius: 2px; background: rgba(200, 170, 110, .08); border: 1px solid var(--hair2); color: var(--gold2); font-weight: 650; letter-spacing: .03em; box-shadow: none; }
+.btn:hover { background: rgba(200, 170, 110, .17); border-color: var(--gold); box-shadow: none; }
+.btn:active { transform: translateY(1px); }
+.btn.ghost { background: none; border-color: var(--hair); color: var(--muted); }
+.btn.ghost:hover { color: var(--gold2); border-color: var(--hair2); background: rgba(200, 170, 110, .06); }
+.btn .i { margin-right: 1px; }
+.mode-tabs, .seg { border-radius: 2px; padding: 3px; background: rgba(4, 8, 15, .7); border: 1px solid var(--hair); }
+.mtab, .seg button { border-radius: 2px; letter-spacing: .04em; }
+.mtab.on, .seg button.on { color: #fff; background: linear-gradient(180deg, rgba(var(--champ-rgb), .24), rgba(var(--champ-rgb), .05));
+  box-shadow: inset 0 -2px 0 var(--champ), inset 0 0 0 1px rgba(var(--champ-rgb), .3); }
+.dd-btn, .dd-menu { border-radius: 2px; }
+
+/* modalok */
+.bug-box, .ed-box, .stream-box { border-radius: 3px; border: 1px solid var(--hair2); background: linear-gradient(180deg, #0e1727, #080e1a); box-shadow: 0 30px 70px rgba(0, 0, 0, .75); }
+.drawer { backdrop-filter: none; }
+
+/* ellenfél-jellemzők: csapat-összesítő + hős-jelzők */
+.enemy-row .ic { position: relative; overflow: visible; margin-bottom: 7px; }
+.tr-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 8px; }
+.tr-chip { display: inline-flex; align-items: baseline; gap: 7px; padding: 5px 10px 5px 9px; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted);
+  background: rgba(255, 255, 255, .025); border: 1px solid rgba(255, 255, 255, .08); border-radius: 2px; }
+.tr-chip b { font: 800 15px var(--font-d); letter-spacing: 0; color: #fff; font-variant-numeric: tabular-nums; }
+.tr-chip.hard b { color: #ff8f7e; } .tr-chip.eng b { color: #ffd070; } .tr-chip.soft b { color: #86d6ff; } .tr-chip.shd b { color: #9ee6c3; }
+.tr-chip.hard { border-color: rgba(255, 143, 126, .3); } .tr-chip.eng { border-color: rgba(255, 208, 112, .3); }
+.tpips { position: absolute; left: 50%; bottom: -6px; transform: translateX(-50%); display: flex; gap: 3px; z-index: 2; }
+.tp { display: grid; place-items: center; width: 12px; height: 12px; font: 800 8.5px/1 var(--font); font-style: normal; color: #1a0a08; }
+.tp.hard { background: #ff8f7e; border-radius: 1px; }
+.tp.eng { background: #ffd070; transform: rotate(45deg) scale(.78); }
+.tp.soft { background: #86d6ff; border-radius: 50%; width: 9px; height: 9px; }
+.ig-l1 .tpips { position: static; transform: none; margin-left: 5px; display: inline-flex; vertical-align: middle; }
+
+/* mozgás: az engedélyezett marad, ha a rendszer csökkentett mozgást kér, minden áll */
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+.es-star { font-size: 0; display: grid; place-items: center; border-radius: 2px; }
+.es-star .i { width: 22px; height: 22px; stroke-width: 1.5; }
+.es-star.on { color: #ffcf45; text-shadow: none; }
+.es-star.on .i { filter: drop-shadow(0 0 4px rgba(255, 200, 70, .45)); }
+.es-favtag .i { width: 11px; height: 11px; }
+.cbar-star .i { width: 22px; height: 22px; color: var(--gold); }
+#content > .card:not(:first-child), .stats-wrap > .card { margin-top: 12px; }
+.es-row { border-radius: 3px; }
+.es-row.live { box-shadow: inset 3px 0 0 #ff4d6a; }
+
+/* szűrők, sorok, listák – éles sarok, hajszál-keret */
+.ch-chip, .ch-sort button, .ch-chips button { border-radius: 2px; background: rgba(8, 14, 25, .8); border: 1px solid var(--hair); letter-spacing: .04em; box-shadow: none; }
+.ch-chip:hover { border-color: var(--hair2); color: var(--gold2); }
+.ch-chip.on { color: #fff; background: linear-gradient(180deg, rgba(var(--champ-rgb), .24), rgba(var(--champ-rgb), .05)); border-color: rgba(var(--champ-rgb), .55); box-shadow: inset 0 -2px 0 var(--champ); }
+.tier-row, .crow, .es-row, .kpi, .rk, .prof, .summary, .cs-head, .cs-pick { border-radius: 3px; }
+.tier-row { background: linear-gradient(90deg, rgba(14, 23, 40, .9), rgba(8, 14, 25, .9)); border-color: var(--hair); }
+.tier-row:hover { transform: none; border-color: var(--hair2); box-shadow: inset 3px 0 0 var(--champ); }
+.ch-title, .es-title { font-family: var(--font-d); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: 22px; }
+.ch-title small { font-family: var(--font); letter-spacing: .02em; text-transform: none; font-weight: 500; }
+.ch-head { position: relative; padding-bottom: 12px; margin-bottom: 14px; }
+.ch-head::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: linear-gradient(90deg, var(--hair2), var(--hair) 50%, transparent); }

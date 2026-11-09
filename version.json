@@ -1,14 +1,14 @@
 {
-  "version": "3.23.0",
-  "notes": "Próbáld ki ajánló a statisztika oldalon: erős meta hősöket javasol (S/A tier), amiket még nem játszol sokat; kattintásra egyből a buildjük jön be.",
+  "version": "3.24.0",
+  "notes": "Bővített ellenfél-összegzés: hősönkénti kemény CC / engage / lassítás / pajzs jelzők (LoL Wiki-alapú adatból), csapat-összesítő és tárgytippek. Új Hextech arculat: éles keretek, arany hajszálak, hex-rács háttér, egységes SVG-ikonok.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_23_0.cp312-win_amd64.pyd": "891b18ddae59d881ae6d92149d685ea233b78934242f78acfcc9e948814fd5d5",
-    "server.py": "bb725f9818fd26f27a3a8775cf1b9970046e7364500a7351cf78f1d9c1d2c644",
-    "web/app.js": "e7094a3460b37eed41bf35735f05ec73f40547e5bffde84aa2eeccf5db567d6d",
+    "rmcore_3_24_0.cp312-win_amd64.pyd": "4104069d0dc2ba08da2ef18a5f12c8e3178f3124a91d7eadc4bf88b4876de543",
+    "server.py": "02c03bcc53a2ec05d6b89ae05aec2c7e422325d75fcad3b22862f0ee72a8f464",
+    "web/app.js": "dce38f1133331e6abb5438746366dea0c93097ccffcf1260c517c18741402953",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
-    "web/index.html": "e785791b8b8dceb79124a25d37f9f852a226ed66386cbf40189137d26d3f73ab",
+    "web/index.html": "941a1a102c6bcb9c9a45f8d222ae0187f80ca6cb5a6d853f3006f27a0d624835",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "afdc1bbbf7a239a35c373b845ee77c619126cc71f79cccaa8ec2474822738d06"
+    "web/style.css": "dea0d3eb53b1b15603096bc4d69840c6c90a886ec2b297e4577ecb9eb7e21a22"
   }
 }
