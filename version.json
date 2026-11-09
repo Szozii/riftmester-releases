@@ -1,10 +1,10 @@
 {
-  "version": "3.19.0",
-  "notes": "Hibajelentő javítás: ha a küldés nem sikerül, most kiírja a konkrét okot (pl. halott webhook / hálózat), a szöveg másolása bombabiztos (vágólap + kijelölés tartalék), a GitHub-link eltávolítva.",
+  "version": "3.20.0",
+  "notes": "Javítás: a hibajelentő mostantól akkor is a fejlesztői Discord webhookra küld, ha a felhasználó configjában régről üres érték maradt (eddig 'No webhook configured' hibát adott).",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_19_0.cp312-win_amd64.pyd": "3277f138fa1d01ebd2486e2d01eb83767b0cc7f1e1d72861f1d954d4490b6fcd",
-    "server.py": "c87cb6b8cd0aad9ca8f1d36b1cb09b221a257154d519991ca96b6933936e102b",
+    "rmcore_3_20_0.cp312-win_amd64.pyd": "b722ca1bbcc0d59ef4b1910353edf1466823e8de9fc591c4c77e001194dc86bb",
+    "server.py": "1d33d44786a069df95a6dbf82deb4bdef7b370e5c3ce70b5ebcdfeebcbdb3f76",
     "web/app.js": "50c3e4d3d5b7e5b19f4f94290c3ef56dc75ce4825d2dea62b7f46c336a8ac84c",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "e785791b8b8dceb79124a25d37f9f852a226ed66386cbf40189137d26d3f73ab",
