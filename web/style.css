@@ -1494,7 +1494,7 @@ input, textarea { caret-color: var(--violet2); }
 .dd-label { color: var(--violet2); letter-spacing: .1em; }
 
 /* ---- listák, sorok, kártyák az oldalakon */
-.tier-row, .crow, .es-row, .kpi, .rk, .prof, .summary, .cs-head, .cs-pick, .ig-card, .lp-card, .mrow, .cbar, .set-sec, .ch-tile, .fav {
+.tier-row, .crow, .es-row, .kpi, .rk, .prof, .summary, .cs-head, .cs-pick, .ig-card, .lp-card, .mrow, .cbar, .set-sec, .ch-tile {
   border-radius: var(--r); background: linear-gradient(180deg, #221f40, var(--card)); border: 1px solid var(--line); box-shadow: var(--sh1); }
 .tier-row:hover, .es-row:hover, .crow:hover, .ch-tile:hover, .mrow:hover { transform: translateY(-1px); border-color: var(--violet2); box-shadow: var(--sh1), 0 0 0 1px rgba(167, 139, 250, .25); }
 .es-row.live { border-color: var(--rose); box-shadow: var(--sh1), 0 0 0 1px rgba(244, 63, 94, .35); }
@@ -1573,3 +1573,12 @@ input, textarea { caret-color: var(--violet2); }
 .empty { margin-bottom: 12px; }
 .ed-foot .btn:last-child, .bug-box .btn[data-bug="send"] { background: linear-gradient(180deg, #fb4766, var(--rose2)); border-color: transparent; color: #fff; box-shadow: 0 1px 0 rgba(255, 255, 255, .28) inset, 0 8px 16px -6px rgba(244, 63, 94, .55); }
 .bug-box .btn[data-bug="send"] { padding: 7px 16px; }
+
+/* kedvenc hősök sáv (bal felső kis kártyák): a splash kitöltse a kártyát, a név ne vágódjon le */
+.fav { width: 76px; height: 108px; border-radius: 10px; border: 1px solid var(--line); background-color: var(--card); background-size: cover; background-position: 50% 12%; background-repeat: no-repeat; box-shadow: var(--sh1); overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; }
+.fav::before { background: linear-gradient(0deg, rgba(15, 15, 35, .96) 0%, rgba(15, 15, 35, .45) 45%, transparent 75%); }
+.fav:hover { transform: translateY(-2px); border-color: var(--violet2); }
+.fav.sel { border-color: var(--violet2); box-shadow: 0 0 0 2px var(--violet), 0 8px 16px -4px rgba(124, 58, 237, .6); }
+.fav-n { font: 400 11px var(--font-d); letter-spacing: .02em; text-align: left; padding: 0 7px; }
+.fav-s { font-size: 10px; color: var(--muted); text-align: left; padding: 0 7px 6px; }
+.favs { gap: 8px; padding: 4px 3px 8px; }
