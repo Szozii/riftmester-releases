@@ -1323,3 +1323,26 @@ body.fx-off .nav-badge.live { animation: none; }
 .shard-opt .sh-fallback { font-size: 11px; color: var(--muted); }
 .shard-opt:hover { filter: grayscale(.15) brightness(1); transform: scale(1.08); }
 .shard-opt.on { border-color: var(--champ); filter: none; box-shadow: 0 0 10px -2px rgba(var(--champ-rgb), .85); background: rgba(var(--champ-rgb), .12); }
+
+/* ================================================================ v21 – hibajelentés (bogár ikon + modal) */
+.bug-btn { width: 34px; height: 34px; border-radius: 9px; border: 1px solid var(--line); background: rgba(255,255,255,.03);
+  color: var(--muted); display: grid; place-items: center; cursor: pointer; transition: .15s; padding: 0; }
+.bug-btn svg { width: 19px; height: 19px; }
+.bug-btn:hover { color: #ffc24b; border-color: rgba(255,194,75,.5); background: rgba(255,194,75,.1); transform: translateY(-1px); }
+#bugModal { position: fixed; inset: 0; z-index: 75; display: none; align-items: center; justify-content: center;
+  background: rgba(3,6,12,.72); backdrop-filter: blur(5px); padding: 20px; }
+#bugModal.open { display: flex; }
+.bug-box { width: min(560px, 96vw); display: flex; flex-direction: column; overflow: hidden; border-radius: 18px;
+  background: linear-gradient(180deg, rgba(18,24,36,.98), rgba(10,14,22,.98)); border: 1px solid rgba(var(--champ-rgb), .4);
+  box-shadow: 0 24px 70px rgba(0,0,0,.6); animation: edIn .22s ease; }
+.bug-body { padding: 16px 18px; }
+.bug-intro { font-size: 13.5px; color: var(--muted); line-height: 1.5; margin-bottom: 12px; }
+#bugText { width: 100%; background: rgba(255,255,255,.05); border: 1px solid var(--line); border-radius: 10px;
+  padding: 11px 13px; color: #fff; font: inherit; font-size: 14px; resize: vertical; min-height: 110px; }
+#bugText:focus { outline: none; border-color: rgba(var(--champ-rgb), .6); }
+.bug-diag { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 13px; color: var(--ink, #eaf4fb); cursor: pointer; }
+.bug-diag-prev { margin-top: 7px; font-size: 11px; line-height: 1.5; word-break: break-word; }
+.bug-fb { margin-top: 14px; padding: 13px; border-radius: 11px; border: 1px solid rgba(var(--champ-rgb), .4); background: rgba(var(--champ-rgb), .08); }
+.bug-fb b { display: block; font-size: 14px; margin-bottom: 3px; }
+.bug-fb span { display: block; font-size: 12.5px; color: var(--muted); margin-bottom: 10px; }
+.bug-fb-act { display: flex; gap: 8px; flex-wrap: wrap; }

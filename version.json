@@ -1,14 +1,14 @@
 {
-  "version": "3.15.0",
-  "notes": "A build-oldali teljes rúnalap mostantól szerkeszthető: kattints a rúnákra és statmodokra, a kis Mentés gombbal saját rúnákként menti (a tárgyak maradnak U.GG-ből), és ez kerül a játékba. Plusz: a kompakt rúna-kijelzőn a másodlagos fa ikonja már jól látszik (nincs üres hely).",
+  "version": "3.16.0",
+  "notes": "Hibajelentő: a bal alsó sarokban egy bogár ikonnal a felhasználók pár szóban jelenthetik a hibákat (automatikus diagnosztikával). A jelentés a fejlesztő Discord webhookjára fut be (Beállításokban állítható), vagy tartalékként GitHub Issuesra / vágólapra.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_15_0.cp312-win_amd64.pyd": "13bf90de349f1083896c743eaf323c41fc7d0f5bea4067156835ff3e15765305",
-    "server.py": "8b5e5ea7249235ab9be62613de6a8a491f336db8b795f1b3fa94b2c43a695165",
-    "web/app.js": "0d179a2c5a3d356b963dcbb01a16aab9a64cd9c47bb35f809c03385bdda0a420",
+    "rmcore_3_16_0.cp312-win_amd64.pyd": "8c504489cb091f8c0273bd626429daf5238d5e0f3e176d207458a062be9a6f02",
+    "server.py": "089913059ad7875807cd9e4efcae8540b6caf1f55eaf69fa721c8de37cf8c698",
+    "web/app.js": "f642baa2231448bbc3b57844d8afc0cf20bad687597c256fb56a7c3c7f3f6c8a",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
-    "web/index.html": "62eb4b9c80c92847edaccc45cc14e4362d66ba80337aadb1bc29264b33027faa",
+    "web/index.html": "e785791b8b8dceb79124a25d37f9f852a226ed66386cbf40189137d26d3f73ab",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "2a2ab00b9691af9445b83365c9a8f4c30f485296dc31816d44bf1a41cd81c2fe"
+    "web/style.css": "c2661229f76e870667c023d9d6e8a9f6be40d6a5b441419629d905251d7f0f86"
   }
 }
