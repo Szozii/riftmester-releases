@@ -1,11 +1,11 @@
 {
-  "version": "3.17.0",
-  "notes": "A hibajelentések mostantól alapból a fejlesztő Discord csatornájára futnak be (beégetett webhook) – minden felhasználó jelentése megérkezik, külön beállítás nélkül.",
+  "version": "3.18.0",
+  "notes": "Javítás: a hibajelentő mostantól tényleg elküldi a jelentést a Discordra (a HTTPS-hívás a megfelelő tanúsítvány-kontextust használja). A webhook-mezőt kivettük a beállításokból, mivel már alapból be van állítva.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_17_0.cp312-win_amd64.pyd": "a9119acc62f7aed7fcbd5a96fd763703bb9ca955699d07d2a9c2ffcc68080839",
-    "server.py": "34370e55174e674782b5e308cdf00639fcb7f931ad86d9b655936cfb7f018e4c",
-    "web/app.js": "f642baa2231448bbc3b57844d8afc0cf20bad687597c256fb56a7c3c7f3f6c8a",
+    "rmcore_3_18_0.cp312-win_amd64.pyd": "7f654e63caec1cf5cd66509af550353950ef786b2a00219f5790c565b6df3b86",
+    "server.py": "26762437baff6e0009f11d2fd8fe50cddc9006ceebb2af8d3f8d7ed40f4748e9",
+    "web/app.js": "c79b711c483825817abb4794ef996083c096e7f69642a110ccc5a9a6721703b7",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "e785791b8b8dceb79124a25d37f9f852a226ed66386cbf40189137d26d3f73ab",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
