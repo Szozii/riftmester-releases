@@ -1,0 +1,14 @@
+{
+  "version": "3.25.1",
+  "notes": "Javítás: a kedvenc hősök kis kártyái (bal felül) – a háttérkép újra kitölti a kártyát, a hősnevek nem vágódnak le.",
+  "files": {
+    "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
+    "rmcore_3_25_1.cp312-win_amd64.pyd": "951bd7beb41a6ad0ca65c95b8ad5329b314b3bd9dc2c75538ac9bb5b20f67b7c",
+    "server.py": "64449379c9835aa3be023a38a8a0d9720432d09e4dbf7ec068460512fdf51582",
+    "web/app.js": "76cfeea6d584e76a452153f5f3d6252038f5357439e28bfe9196a0edb440c5c9",
+    "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
+    "web/index.html": "68c9d693dc71664b1e5adb71178183ce147f5e81d5cd0bb7ab353c4c508b72de",
+    "web/logo.svg": "d4b2d0b7f0b9adb8a599ca208917b51c33a175e76154fa142fbd8a761ec76cd0",
+    "web/style.css": "99f1b2a90962981ff51e143dc1cf57c886de0c2c164967d2ff25016745b11b6c"
+  }
+}

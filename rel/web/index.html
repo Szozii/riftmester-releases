@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>RiftMester</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="logo.svg">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=chakra-petch:400,500,600,700|russo-one:400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bg"><div id="bgImg"></div></div>
+
+<div class="shell">
+<aside class="sidebar">
+  <div class="side-brand"><img src="logo.svg" alt=""><span>Rift<b>Mester</b></span></div>
+  <div class="searchbox side-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input type="text" id="topSearch" placeholder="Hős keresése…" data-i18n-ph="Hős keresése…" autocomplete="off"></div>
+  <button class="side-btn nav-btn" data-page="build">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><span data-i18n>Build</span></button>
+  <button class="side-btn nav-btn" data-page="cs">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7z"/></svg><span data-i18n>Hősválasztás</span></button>
+  <button class="side-btn nav-btn ig" data-page="ingame" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="10" rx="4"/><path d="M7 11v2M6 12h2M15 12h.01M18 12h.01"/></svg><span data-i18n>In game</span></button>
+  <button class="side-btn nav-btn" data-page="stats">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span data-i18n>Statisztika</span></button>
+  <div class="side-sep"></div>
+  <button class="side-btn nav-btn" data-page="champions">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg><span data-i18n>Champions</span></button>
+  <button class="side-btn nav-btn" data-page="tierlist">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V8M10 20V4M16 20v-9M22 20H2"/></svg><span data-i18n>Tier List</span></button>
+  <button class="side-btn nav-btn" data-page="meta">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n>Meta</span></button>
+  <button class="side-btn nav-btn" data-page="favorites">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21C5 16 3 11.5 3 8.5 3 5.5 5.5 4 8 4c1.7 0 3.1.9 4 2.3C12.9 4.9 14.3 4 16 4c2.5 0 5 1.5 5 4.5 0 3-2 7.5-9 12.5z"/></svg><span data-i18n>Kedvencek</span></button>
+  <button class="side-btn nav-btn" data-page="esport">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9a6 6 0 0 0 12 0V3H6zM9 21h6M12 15v6M4 5H2v2a3 3 0 0 0 3 3M20 5h2v2a3 3 0 0 1-3 3"/></svg><span data-i18n>Esport</span><span class="nav-badge off" id="esBadge"></span></button>
+  <div class="side-spacer"></div>
+  <button class="side-btn" id="sideSettings">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8 2 2 0 1 1-2.8 2.8 1.7 1.7 0 0 0-2.9 1.2 2 2 0 1 1-4 0 1.7 1.7 0 0 0-2.9-1.2 2 2 0 1 1-2.8-2.8A1.7 1.7 0 0 0 4.6 15a2 2 0 1 1 0-4 1.7 1.7 0 0 0 1.5-2.9 2 2 0 1 1 2.8-2.8A1.7 1.7 0 0 0 11 4.6a2 2 0 1 1 4 0 1.7 1.7 0 0 0 2.9 1.5 2 2 0 1 1 2.8 2.8A1.7 1.7 0 0 0 19.4 11a2 2 0 1 1 0 4z"/></svg><span data-i18n>Beállítások</span></button>
+  <div class="side-foot">
+    <div class="status" id="status" title=""><span class="dot"></span></div>
+    <button class="lang-btn" id="langBtn">HU</button>
+    <button class="bug-btn" id="bugBtn" title="Hibát találtál? Jelezd!" aria-label="Hibajelentés">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+        <path d="M8 8a4 4 0 0 1 8 0"/><rect x="8" y="8" width="8" height="10" rx="4"/>
+        <path d="M12 10v8M4 11h4M16 11h4M4.5 6l3 2M19.5 6l-3 2M4.5 17l3-2M19.5 17l-3-2"/></svg>
+    </button>
+    <div class="avatar" title="RiftMester"><img src="logo.svg" alt=""></div>
+  </div>
+</aside>
+
+<div class="appmain">
+<div class="statusline" id="statusText" data-i18n>Indulás…</div>
+
+<div id="banner"></div>
+
+<!-- ============ BUILD ============ -->
+<section class="page" id="page-build">
+  <div class="hero" id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-img" id="heroImg"></div>
+    <div class="hero-in">
+      <div class="hero-top"><div class="badges" id="badges"></div><div class="hero-wr" id="heroWr"></div></div>
+      <div class="hero-name">
+        <div class="champ-title" id="champTitle" data-i18n>Hősválasztáskor magától betöltődik</div>
+        <div class="champ-name" id="champName" data-i18n>Válassz hőst</div>
+      </div>
+      <div class="abil" id="heroAbil"></div>
+    </div>
+  </div>
+
+  <div class="favs" id="favs"></div>
+
+  <div class="mode-tabs" id="modeTabs"></div>
+
+  <div class="controls">
+    <div class="dd wide" id="ddChamp">
+      <button class="dd-btn"><span class="dd-label" data-i18n>Hős</span><span class="dd-value" id="ddChampVal" data-i18n>Keresés…</span><i class="chev"></i></button>
+      <div class="dd-menu">
+        <input type="text" id="champSearch" placeholder="Írd be a hős nevét…" data-i18n-ph="Írd be a hős nevét…" autocomplete="off">
+        <div class="dd-list" id="champList"></div>
+      </div>
+    </div>
+    <div class="dd" id="ddRole">
+      <button class="dd-btn"><span class="dd-label" data-i18n>Pozíció</span><span class="dd-value" id="ddRoleVal">Auto</span><i class="chev"></i></button>
+      <div class="dd-menu"><div class="dd-list" id="roleList"></div></div>
+    </div>
+    <div class="dd" id="ddRank">
+      <button class="dd-btn"><span class="dd-label" data-i18n>Rang adat</span><span class="dd-value" id="ddRankVal">Smaragd+</span><i class="chev"></i></button>
+      <div class="dd-menu"><div class="dd-list" id="rankList"></div></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="placeholder" id="placeholder"><div class="spinner"></div><p id="placeholderText" data-i18n>Adatok betöltése…</p></div>
+  </div>
+</section>
+
+<!-- ============ HŐSVÁLASZTÁS ============ -->
+<section class="page" id="page-cs" hidden>
+  <div id="csContent"></div>
+</section>
+
+<!-- ============ IN GAME ============ -->
+<section class="page" id="page-ingame" hidden>
+  <div id="igContent"></div>
+</section>
+
+<!-- ============ STATISZTIKA ============ -->
+<section class="page" id="page-stats" hidden>
+  <div id="statsContent"><div class="placeholder"><div class="spinner"></div><p data-i18n>Statisztika betöltése…</p></div></div>
+</section>
+
+<!-- ============ CHAMPIONS ============ -->
+<section class="page" id="page-champions" hidden>
+  <div id="champContent"></div>
+</section>
+
+<!-- ============ TIER LIST ============ -->
+<section class="page" id="page-tierlist" hidden>
+  <div id="tierContent"></div>
+</section>
+
+<!-- ============ META ============ -->
+<section class="page" id="page-meta" hidden>
+  <div id="metaContent"></div>
+</section>
+
+<!-- ============ KEDVENCEK ============ -->
+<section class="page" id="page-favorites" hidden>
+  <div id="favContent"></div>
+</section>
+
+<!-- ============ ESPORT ============ -->
+<section class="page" id="page-esport" hidden>
+  <div id="esportContent"></div>
+</section>
+
+<!-- ============ HAMAROSAN ============ -->
+<section class="page" id="page-soon" hidden>
+  <div class="soon glass">
+    <div class="soon-ic"><img src="logo.svg" alt=""></div>
+    <h2 id="soonTitle">Hamarosan</h2>
+    <p id="soonText" data-i18n>Ez a rész hamarosan elkészül.</p>
+  </div>
+</section>
+
+<footer id="footer"></footer>
+</div><!-- /main -->
+</div><!-- /shell -->
+
+<!-- ============ BEÁLLÍTÁSOK ============ -->
+<div class="drawer" id="settings" hidden>
+  <div class="drawer-in glass">
+    <div class="drawer-h"><h2 data-i18n>Beállítások</h2><button class="icon-btn" id="closeSettings" data-i18n-title="Bezárás" title="Bezárás">✕</button></div>
+    <div id="settingsBody"></div>
+  </div>
+</div>
+
+<div id="tooltip"></div>
+<div id="toast"></div>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+RiftMester v3.3 – LoL build segéd a második monitorra
+=====================================================
+
+MIT TUD?
+- Hősválasztáskor felismeri a hősödet, a pozíciódat és a sort (Solo/Duo, Flex, ARAM, ARAM Mayhem).
+- Amint lezárod a hőst, MAGÁTÓL:
+  · beállítja a rúnalapot a kliensben,
+  · beteszi a buildet a játékba: a boltban az ajánlott tárgyaknál "RiftMester · Hős · Mód" néven
+    látod (kezdés, core, 4–6. tárgy választható opciói).
+  (Mindkettő kikapcsolható a Beállításokban.)
+- Build útvonal: az 1–6. tárgy egy sorban, kattintgatás nélkül. Az 1–3. a core, a 4–6. helyen
+  a legnépszerűbb választás nagyban, alatta két alternatíva.
+- Tárgyak nézete (a Tárgyak kártya tetején váltható, alapértéke a Beállításokban):
+  · Alap (U.GG): a tiszta statisztikai build.
+  · Ellenfél ellen: az alap buildből indul, a core marad, de a 4–6. helyre és a csizmához az
+    aktuális ellenfelekhez illő tárgyak kerülnek (sok AP → mágiaellenállás, sok AD → páncél,
+    gyógyítók → sebkésleltetés, tankok → átütés). Az "ÚJ" jelölés mutatja, mi változott, alul
+    pedig minden cseréhez ott az indok. Ha az alap build már tartalmaz illő tárgyat, nem cserél.
+    Elsősorban az U.GG adatai közül választ (ilyenkor WR is látszik); ha ott nincs megfelelő,
+    a RiftMester saját javaslatát mutatja ("javaslat" felirat).
+  · Mindkettő: a kettő egymás alatt.
+  Az ellenfél szerinti build draftban jelenik meg, amint az ellenfelek választanak, illetve
+  meccs közben. A játékba (tárgylistaként) MINDIG az alap U.GG build kerül.
+- Meccs közben: a megvett tárgyak pipát kapnak, a következő vétel világít ("MOST"),
+  a skill-táblázat mutatja, hova tedd a pontot az aktuális szinteden.
+- Hősválasztás fül: a két csapat élőben (pozíciók, választások, nézelődés, kitiltások, visszaszámláló),
+  minden választott hős alatt a 3 legerősebb counter győzelmi aránnyal. Innen is választhatsz és
+  tilthatsz ki hőst (kereshető lista, "Counterek" és "Saját" szűrő). Hősválasztáskor magától erre a
+  fülre vált (kikapcsolható), a meccs indulásakor pedig a Build fülre.
+- Kedvenceid: a legtöbbet játszott hőseid fent, győzelmi aránnyal – egy kattintás és jön a buildjük.
+- Statisztika menü: rangod (Solo/Duo, Flex), szezonbeli meccsek, győzelem/vereség, win rate,
+  KDA, sorozat, hősönként a meccsszám és a win rate, legutóbbi meccsek. Módonként szűrhető.
+- Beállítások (fogaskerék ikon): nyelv, indítás, automatikus betöltések, megjelenés, statisztika, frissítés.
+- Magyar és angol nyelv: a fenti HU/EN gombbal vagy a Beállításokban váltható. Váltáskor a hős-,
+  tárgy- és rúnanevek is átváltanak a választott nyelvre.
+
+
+TELEPÍTÉS (egyszer kell)
+1. Telepítsd a Pythont: https://www.python.org/downloads/
+   FONTOS: a telepítő első oldalán pipáld be: "Add python.exe to PATH".
+2. Csomagold ki ezt a mappát egy állandó helyre (pl. Dokumentumok\RiftMester).
+   A régi "lol-build-ablak" mappát nyugodtan töröld. (Ha ott be volt kapcsolva az automatikus
+   indítás, a RiftMester első beállításakor a régi indítót magától eltávolítja.)
+3. Indítsd el egyszer: INDITAS.bat
+   (Ha még fut a háttérben a régi "LoL Build Ablak", a RiftMester magától leállítja,
+   és a régi automatikus indítását is eltávolítja.)
+4. Kattints a fogaskerékre → Indítás → válaszd: "A LoL-lal együtt" (ajánlott).
+   Ettől kezdve a géppel együtt csendben elindul a háttérben, és amikor elindítod a LoL-t,
+   magától megnyílik a második monitorodon. Semmit nem kell kattintanod.
+
+
+A STATISZTIKÁRÓL
+- A rangod és a rangsorolt győzelem/vereség a Riottól jön, ez mindig pontos.
+- A hősönkénti és módonkénti statisztikát a kliens meccselőzményeiből építi fel. A kliens csak
+  a legutóbbi meccseket adja vissza (kb. 100–200), de a RiftMester minden meccset elment,
+  így a használattal folyamatosan bővül a szezon teljes statisztikája.
+- A "remake" (5 percnél rövidebb) meccseket nem számolja.
+- A szezon kezdete a Beállításokban állítható (alapból az év eleje).
+
+
+ERŐFORRÁS
+- Háttérprogram: kb. 20–40 MB memória, gyakorlatilag 0% CPU.
+- Az ablak egy Edge-folyamat: kb. 80–150 MB. Nincs Overwolf, nincs overlay, a játékba nem nyúl bele.
+
+
+HA VALAMI NEM STIMMEL
+- Ha a U.GG nem válaszol, a legutóbb mentett buildet mutatja; ha az sincs, a Riot saját ajánlását.
+- Hiba esetén megjelenik egy "Hiba másolása" gomb – a kimásolt szöveget küldd el, könnyen javítható.
+- Napló konzol nélküli futásnál: cache\naplo.txt
+
+
+AUTOMATIKUS FRISSÍTÉS (a saját weboldaladról)
+A RiftMester a weboldalad "update" mappájából frissíti magát.
+1. Töltsd fel a weboldalt a tárhelyedre (lásd a weboldal csomagban a FELTOLTES.txt-t).
+2. Beállítások → Frissítés → Frissítési cím:  https://SAJATDOMAIN.hu/update/
+   (vagy a config.json-ban: "update_url")
+Ezután induláskor és 6 óránként megnézi, van-e új verzió. Csak https-ről tölt le, minden fájlt
+ellenőrzőösszeggel ellenőriz, a beállításaidat soha nem írja felül, és mentést készít a régi
+fájlokról (cache\backup_...).
+
+Új verzió kiadása:
+1. A server.py elején növeld a VERSION számot (pl. "3.2.1").
+2. Futtasd:  py make_manifest.py "mi változott" --export ..\weboldal\update
+3. Töltsd fel a weboldal "update" mappáját (és az új ZIP-et a "download" mappába) a tárhelyre.
+   A felhasználók programjai maguktól frissülnek.
+
+
+TOVÁBBI BEÁLLÍTÁSOK (config.json – Jegyzettömbbel)
+- "league_path": ha nem találja a klienst, a LoL mappája dupla \\ jellel,
+  pl. "D:\\Jatekok\\Riot Games\\League of Legends"
+- "window_x", "window_y": fix ablakhely (felülírja a második monitor automatikát)
+- "window_width", "window_height": ablakméret
+- "ui_lang": "hu" vagy "en" – a program nyelve (a Beállításokban is váltható)
+- "debug": true – részletes hibaüzenetek
+
+
+A NÉV MEGVÁLTOZTATÁSA
+Ha más nevet szeretnél: server.py elején APP_NAME, a web\index.html-ben a <title> és a
+"Rift<b>Mester</b>" felirat.
+
+A RiftMester nem hivatalos Riot program. Ugyanazt a helyi kliens-API-t használja, mint a Blitz,
+a U.GG vagy a Porofessor: olvas, és a beállításaid szerint rúnalapot és tárgylistát állít be.
