@@ -1,10 +1,10 @@
 {
-  "version": "3.16.0",
-  "notes": "Hibajelentő: a bal alsó sarokban egy bogár ikonnal a felhasználók pár szóban jelenthetik a hibákat (automatikus diagnosztikával). A jelentés a fejlesztő Discord webhookjára fut be (Beállításokban állítható), vagy tartalékként GitHub Issuesra / vágólapra.",
+  "version": "3.17.0",
+  "notes": "A hibajelentések mostantól alapból a fejlesztő Discord csatornájára futnak be (beégetett webhook) – minden felhasználó jelentése megérkezik, külön beállítás nélkül.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_16_0.cp312-win_amd64.pyd": "8c504489cb091f8c0273bd626429daf5238d5e0f3e176d207458a062be9a6f02",
-    "server.py": "089913059ad7875807cd9e4efcae8540b6caf1f55eaf69fa721c8de37cf8c698",
+    "rmcore_3_17_0.cp312-win_amd64.pyd": "a9119acc62f7aed7fcbd5a96fd763703bb9ca955699d07d2a9c2ffcc68080839",
+    "server.py": "34370e55174e674782b5e308cdf00639fcb7f931ad86d9b655936cfb7f018e4c",
     "web/app.js": "f642baa2231448bbc3b57844d8afc0cf20bad687597c256fb56a7c3c7f3f6c8a",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "e785791b8b8dceb79124a25d37f9f852a226ed66386cbf40189137d26d3f73ab",
