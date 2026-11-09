@@ -1,14 +1,14 @@
 {
-  "version": "3.22.0",
-  "notes": "Ban-ajánló a hősválasztóban: a legerősebb meta hősöket mutatja (win rate + népszerűség alapján), amiket érdemes kitiltani; ban-körben kiemelve, egy kattintással kijelölhető.",
+  "version": "3.23.0",
+  "notes": "Próbáld ki ajánló a statisztika oldalon: erős meta hősöket javasol (S/A tier), amiket még nem játszol sokat; kattintásra egyből a buildjük jön be.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_22_0.cp312-win_amd64.pyd": "9ff7efd462084727020d0e03099bb02c75aefa12f15168dab3601d176bdea761",
-    "server.py": "3dd4582f28005dc780be8c8b4c596917d06eb8f2864dd4939c93cdceec20de9b",
-    "web/app.js": "0e007bac7b4fe492f43376868fe11c06795243ba59859919eb547d14e815b52c",
+    "rmcore_3_23_0.cp312-win_amd64.pyd": "891b18ddae59d881ae6d92149d685ea233b78934242f78acfcc9e948814fd5d5",
+    "server.py": "bb725f9818fd26f27a3a8775cf1b9970046e7364500a7351cf78f1d9c1d2c644",
+    "web/app.js": "e7094a3460b37eed41bf35735f05ec73f40547e5bffde84aa2eeccf5db567d6d",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "e785791b8b8dceb79124a25d37f9f852a226ed66386cbf40189137d26d3f73ab",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "bdc224be2a7613e053ecd2ab06b02b8c6e88230eec7473c6d058a709768fc2f6"
+    "web/style.css": "afdc1bbbf7a239a35c373b845ee77c619126cc71f79cccaa8ec2474822738d06"
   }
 }
