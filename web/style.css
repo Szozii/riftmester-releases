@@ -1394,7 +1394,7 @@ body.fx-off .nav-badge.live { animation: none; }
 :root {
   --bg: #0f0f23;
   --card: #1e1c35; --card2: #242145; --well: #15142b; --line: #3b3568; --line2: #4c1d95;
-  --text: #e2e8f0; --muted: #a8a6c8; --dim: #7f7da8;
+  --text: #e2e8f0; --muted: #a8a6c8; --dim: #8f8dba;
   --violet: #7c3aed; --violet2: #a78bfa; --violet3: #c4b5fd; --rose: #f43f5e; --rose2: #be123c;
   --gold: #c4b5fd; --gold2: #ede9fe; --accent: #a78bfa; --accent2: #22d3ee;
   --champ: #a78bfa; --champ2: #f43f5e; --champ-rgb: 167, 139, 250;
