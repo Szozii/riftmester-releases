@@ -1,14 +1,14 @@
 {
-  "version": "3.21.0",
-  "notes": "Build megosztás: a saját buildedet egy kóddal (RM1-…) megoszthatod bárkivel, ő a ",
+  "version": "3.22.0",
+  "notes": "Ban-ajánló a hősválasztóban: a legerősebb meta hősöket mutatja (win rate + népszerűség alapján), amiket érdemes kitiltani; ban-körben kiemelve, egy kattintással kijelölhető.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_21_0.cp312-win_amd64.pyd": "2e561a7e2ad93910e90677be5dadcb7a5e580872a5d1bc253d7ed88fcf8c9acc",
-    "server.py": "afeb1694cafdd52fe15740b66c9f6eb545be685988599c53b4bf80e93cefd99e",
-    "web/app.js": "b4aeb8690c3c36d8969e2912976d8da92dd38c56cfada22dacf1f1e01915d8b8",
+    "rmcore_3_22_0.cp312-win_amd64.pyd": "9ff7efd462084727020d0e03099bb02c75aefa12f15168dab3601d176bdea761",
+    "server.py": "3dd4582f28005dc780be8c8b4c596917d06eb8f2864dd4939c93cdceec20de9b",
+    "web/app.js": "0e007bac7b4fe492f43376868fe11c06795243ba59859919eb547d14e815b52c",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "e785791b8b8dceb79124a25d37f9f852a226ed66386cbf40189137d26d3f73ab",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "9c2225d2e71836a16492cceec896ba37dca1aeeea0ffc9dfbe516ccea7d4873f"
+    "web/style.css": "bdc224be2a7613e053ecd2ab06b02b8c6e88230eec7473c6d058a709768fc2f6"
   }
 }
