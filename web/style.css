@@ -1346,3 +1346,11 @@ body.fx-off .nav-badge.live { animation: none; }
 .bug-fb b { display: block; font-size: 14px; margin-bottom: 3px; }
 .bug-fb span { display: block; font-size: 12.5px; color: var(--muted); margin-bottom: 10px; }
 .bug-fb-act { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ================================================================ v22 – hibajelentés: hiba állapot + copy */
+.bug-fb.bad { border-color: rgba(255,120,110,.5); background: rgba(255,90,80,.08); }
+.bug-fb.bad b { color: #ff8d82; }
+.bug-err { display: block; font-family: ui-monospace, monospace; font-size: 12px; color: #ffd0cb;
+  background: rgba(0,0,0,.35); border-radius: 7px; padding: 7px 9px; margin: 2px 0 10px; word-break: break-word; }
+.bug-copy-area { width: 100%; background: rgba(0,0,0,.35); border: 1px solid var(--line); border-radius: 8px;
+  color: var(--ink, #eaf4fb); font: 12px/1.4 ui-monospace, monospace; padding: 8px 10px; resize: vertical; margin: 4px 0 10px; }

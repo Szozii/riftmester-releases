@@ -1,14 +1,14 @@
 {
-  "version": "3.18.0",
-  "notes": "Javítás: a hibajelentő mostantól tényleg elküldi a jelentést a Discordra (a HTTPS-hívás a megfelelő tanúsítvány-kontextust használja). A webhook-mezőt kivettük a beállításokból, mivel már alapból be van állítva.",
+  "version": "3.19.0",
+  "notes": "Hibajelentő javítás: ha a küldés nem sikerül, most kiírja a konkrét okot (pl. halott webhook / hálózat), a szöveg másolása bombabiztos (vágólap + kijelölés tartalék), a GitHub-link eltávolítva.",
   "files": {
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_18_0.cp312-win_amd64.pyd": "7f654e63caec1cf5cd66509af550353950ef786b2a00219f5790c565b6df3b86",
-    "server.py": "26762437baff6e0009f11d2fd8fe50cddc9006ceebb2af8d3f8d7ed40f4748e9",
-    "web/app.js": "c79b711c483825817abb4794ef996083c096e7f69642a110ccc5a9a6721703b7",
+    "rmcore_3_19_0.cp312-win_amd64.pyd": "3277f138fa1d01ebd2486e2d01eb83767b0cc7f1e1d72861f1d954d4490b6fcd",
+    "server.py": "c87cb6b8cd0aad9ca8f1d36b1cb09b221a257154d519991ca96b6933936e102b",
+    "web/app.js": "50c3e4d3d5b7e5b19f4f94290c3ef56dc75ce4825d2dea62b7f46c336a8ac84c",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "e785791b8b8dceb79124a25d37f9f852a226ed66386cbf40189137d26d3f73ab",
     "web/logo.svg": "980fbcfdea3673795f9e2e871e13a94312db412b953b5e8e01de249ac96c6d68",
-    "web/style.css": "c2661229f76e870667c023d9d6e8a9f6be40d6a5b441419629d905251d7f0f86"
+    "web/style.css": "539e579ff1ec34d2aef265955bc5c583e8dfb4bca3c2dd0a676fd895ffaf0d35"
   }
 }
