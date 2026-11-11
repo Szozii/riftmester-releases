@@ -1,14 +1,15 @@
 {
-  "version": "3.25.2",
-  "notes": "Javítás: angol nyelvű feliratok hiányai, jobb kontraszt a halvány szövegeknél, címkék az ikon-gombokon (hozzáférhetőség), egységes bezárás ikon.",
+  "version": "3.26.2",
+  "notes": "Teljesítmény: kíméletesebb látvány a LoL kliens mellett; a Mayhem tier adat .txt kiterjesztésre költözött, hogy a régi verziók is tudjanak frissíteni.",
   "files": {
+    "mayhem_tiers.txt": "f1ffd6e2970b7894f501e5302c485c1e9bbc062ba9e2391a56afc00f7c6fe946",
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_25_2.cp312-win_amd64.pyd": "cddb82255c43bf43abab681fffe7bbfb4cd0ac5409f2587826445648a49305c5",
-    "server.py": "90377649c93b5c94762e22c00f68ee3ed7fd7a7f96643b46ff063109196fbc8a",
-    "web/app.js": "c97e0217c74a50066a5693f2b6621b69475bb0a991c116fcdd8f7e6c8f98f3f8",
+    "rmcore_3_26_2.cp312-win_amd64.pyd": "72c79b85a11ffef504d0324f31cb90d650a2f008a9b303043179975a2310d811",
+    "server.py": "54a63a8aa961dc701973bfb0e4cda8468cd1e1f65c0e60a2e99e27932066f14d",
+    "web/app.js": "6a5499eb776ee1fbefcaae15330816b0fe3b20a8b43410dd3c26b808961309f0",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "478f6241f60101d585d403b3d0019bf002eb0e779c898d33a7f4b8b7dec6af1e",
     "web/logo.svg": "d4b2d0b7f0b9adb8a599ca208917b51c33a175e76154fa142fbd8a761ec76cd0",
-    "web/style.css": "65a712438bf60795641be63b7c80eaa1f81d0f92fcaa6e93a4006f5b1b2d6d78"
+    "web/style.css": "75fa8f126edce0b67ca322fd415dc7f7c203ee4e65dafb2097ea136aedc7dcfe"
   }
 }

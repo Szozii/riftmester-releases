@@ -1582,3 +1582,18 @@ input, textarea { caret-color: var(--violet2); }
 .fav-n { font: 400 11px var(--font-d); letter-spacing: .02em; text-align: left; padding: 0 7px; }
 .fav-s { font-size: 10px; color: var(--muted); text-align: left; padding: 0 7px 6px; }
 .favs { gap: 8px; padding: 4px 3px 8px; }
+
+/* ARAM/Mayhem tier jelvény a padon */
+.cs-bench .tiny-tier { top: 1px; right: 1px; padding: 0 3px; font-size: 9px; }
+.cs-bench .cs-g.best img { border-color: #f5d78a; box-shadow: 0 0 10px rgba(245,215,138,.55); }
+.best-lbl { margin-left: 8px; color: #f5d78a; font-weight: 700; text-transform: none; letter-spacing: 0; }
+.t-Sp { color: #ff3d8b; background: rgba(255,61,139,.16); }
+
+
+/* ===== Teljesítmény (3.25.3): kíméljük a gépet a LoL kliens mellett ===== */
+*, *::before, *::after { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+#bg::before { filter: none; }
+body.fx-off .glow, body.in-game .glow, body.fx-off #bg .glow.g3, body.in-game #bg .glow.g3 { display: none; }
+body.fx-off #bgImg, body.in-game #bgImg { filter: none; opacity: .18; will-change: auto; }
+body.fx-off #bg::before, body.in-game #bg::before { display: none; }
+body.fx-off .hero-img, body.in-game .hero-img { will-change: auto; }
