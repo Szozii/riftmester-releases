@@ -1,12 +1,12 @@
 {
-  "version": "3.26.2",
-  "notes": "Teljesítmény: kíméletesebb látvány a LoL kliens mellett; a Mayhem tier adat .txt kiterjesztésre költözött, hogy a régi verziók is tudjanak frissíteni.",
+  "version": "3.27.0",
+  "notes": "Új: választható build adatforrás (U.GG vagy Metasrc) a Beállításokban. A Metasrc Solo/Duo, ARAM és Mayhem adatot is ad; ha nem elérhető, automatikusan az U.GG-t használja.",
   "files": {
     "mayhem_tiers.txt": "f1ffd6e2970b7894f501e5302c485c1e9bbc062ba9e2391a56afc00f7c6fe946",
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_26_2.cp312-win_amd64.pyd": "72c79b85a11ffef504d0324f31cb90d650a2f008a9b303043179975a2310d811",
-    "server.py": "54a63a8aa961dc701973bfb0e4cda8468cd1e1f65c0e60a2e99e27932066f14d",
-    "web/app.js": "6a5499eb776ee1fbefcaae15330816b0fe3b20a8b43410dd3c26b808961309f0",
+    "rmcore_3_27_0.cp312-win_amd64.pyd": "73909744d449f05c74f777fcb0cf62fd55c1bc6c4b81a71a65762d28b6cebb53",
+    "server.py": "72328faa2595c80857f24f8440beccc67cb616e518c5b3c553f369b5accdd9a1",
+    "web/app.js": "831e539691408b9b71cbcabfe2613390128a885f99b8ec0e03296785470d6548",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "478f6241f60101d585d403b3d0019bf002eb0e779c898d33a7f4b8b7dec6af1e",
     "web/logo.svg": "d4b2d0b7f0b9adb8a599ca208917b51c33a175e76154fa142fbd8a761ec76cd0",
