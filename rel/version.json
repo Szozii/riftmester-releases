@@ -1,12 +1,12 @@
 {
-  "version": "3.27.1",
-  "notes": "Javítás: ha a Metasrc nem elérhető, a hiba oka is látszik a figyelmeztetésben; böngésző-kompatibilis fejlécek a lekéréshez.",
+  "version": "3.27.2",
+  "notes": "A Metasrc forrás-választó kikerült (a Metasrc tiltja az automatikus lekérést); az U.GG az egyetlen build-forrás.",
   "files": {
     "mayhem_tiers.txt": "f1ffd6e2970b7894f501e5302c485c1e9bbc062ba9e2391a56afc00f7c6fe946",
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_27_1.cp312-win_amd64.pyd": "e152dfc3989446231d93cb596b44d7f326f2b0bf8425b91ed0f487f9e48a813e",
-    "server.py": "b473d2265a3f1129a5248569449e566840258e00525a49f3cce48a74389d4c81",
-    "web/app.js": "831e539691408b9b71cbcabfe2613390128a885f99b8ec0e03296785470d6548",
+    "rmcore_3_27_2.cp312-win_amd64.pyd": "6bd841fb7a9566f9fa5517c90170e2c2f2a293c685d5d1fe139406ab081b5aec",
+    "server.py": "2568381c318d5f824c75599b5bd6c1dda1d395ea719b83b546085581d4691d0e",
+    "web/app.js": "4071b453ec4915026452626c147480d5919b8898e6f935b96d14b6b333a76db6",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "478f6241f60101d585d403b3d0019bf002eb0e779c898d33a7f4b8b7dec6af1e",
     "web/logo.svg": "d4b2d0b7f0b9adb8a599ca208917b51c33a175e76154fa142fbd8a761ec76cd0",
