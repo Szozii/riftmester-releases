@@ -199,14 +199,14 @@ body { letter-spacing: .01em; }
 @property --ang { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
 .hero, .fav.sel, .tier-row:hover, .ch-tile:hover, .try-c:hover { position: relative; }
 .fx-glow { position: relative; }
-.card::after, .kpi::after, .prof::after, .lp-card::after, .summary::after, .hero::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; pointer-events: none; z-index: 4;
+.summary::after, .hero::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; pointer-events: none; z-index: 4;
   background: conic-gradient(from var(--ang), transparent 0 62%, rgba(25,180,255,.9) 76%, rgba(240,230,210,.95) 88%, transparent 100%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
   animation: angSpin 6s linear infinite; opacity: .0; transition: opacity .5s; }
-.card:hover::after, .kpi:hover::after, .prof:hover::after, .lp-card:hover::after, .summary:hover::after { opacity: 1; }
+.summary:hover::after { opacity: 1; }
 .hero::before { opacity: .55; border-radius: 0; }
 @keyframes angSpin { to { --ang: 360deg; } }
-body.fx-off .card::after, body.fx-off .kpi::after, body.fx-off .hero::before, body.fx-lite .card::after, body.fx-lite .kpi::after, body.fx-lite .hero::before { animation: none; }
+body.fx-off .summary::after, body.fx-off .hero::before, body.fx-lite .summary::after, body.fx-lite .hero::before { animation: none; }
 
 .tier-row, .crow, .mrow, .try-c, .ch-tile { border: 1px solid rgba(200,170,110,.16) !important; border-radius: 10px; }
 .tier-row:hover, .ch-tile:hover, .try-c:hover { border-color: rgba(230,201,138,.7) !important; }
