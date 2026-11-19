@@ -7,11 +7,11 @@
   --spring: cubic-bezier(.34, 1.56, .64, 1);
   --ease-out: cubic-bezier(.16, 1, .3, 1);
   --glass-hi: rgba(255, 255, 255, .07);
-  --glass-top: rgba(36, 32, 84, .74);
-  --glass-bot: rgba(15, 13, 38, .66);
-  --edge: rgba(167, 139, 250, .16);
-  --rift-cyan: 34, 211, 238;
-  --rift-violet: 139, 92, 246;
+  --glass-top: rgba(26, 30, 40, .82);
+  --glass-bot: rgba(11, 13, 19, .78);
+  --edge: rgba(200,170,110, .16);
+  --rift-cyan: 25, 180, 255;
+  --rift-violet: 200, 170, 110;
   --rift-rose: 251, 113, 133;
 }
 @supports (transition-timing-function: linear(0, 1)) {
@@ -39,7 +39,7 @@
     0 0 34px -10px rgba(var(--champ-rgb), .38) !important;
 }
 .tier-row, .crow, .mrow, .try-c, .ch-tile {
-  background: linear-gradient(160deg, rgba(34, 30, 80, .6), rgba(14, 12, 36, .55)) !important;
+  background: linear-gradient(160deg, rgba(24, 28, 38, .72), rgba(11, 13, 19, .66)) !important;
   box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .05), 0 12px 22px -16px rgba(3, 0, 12, .9);
 }
 .fav { box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .06), 0 14px 24px -14px rgba(3, 0, 12, .95); }
@@ -58,7 +58,7 @@
 #bg { background:
   radial-gradient(90% 60% at 12% 0%, rgba(var(--rift-violet), .20), transparent 60%),
   radial-gradient(70% 50% at 100% 100%, rgba(var(--rift-cyan), .12), transparent 62%),
-  radial-gradient(120% 80% at 50% 0%, #121839 0%, var(--bg) 62%); }
+  radial-gradient(120% 80% at 50% 0%, #10161f 0%, var(--bg) 62%); }
 .fx-mesh { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; contain: strict; }
 .fx-mesh i { position: absolute; width: 70vmax; height: 70vmax; border-radius: 50%; opacity: .55; will-change: transform; }
 .fx-mesh i:nth-child(1) { left: -22vmax; top: -30vmax; background: radial-gradient(closest-side, rgba(var(--rift-violet), .75), transparent); animation: meshA 26s ease-in-out infinite alternate; }
@@ -72,7 +72,7 @@
   background: radial-gradient(closest-side, rgba(var(--champ-rgb), .16), rgba(var(--champ-rgb), .05) 55%, transparent); will-change: transform, opacity; transition: opacity .6s; }
 #fxSpot.on { opacity: 1; }
 /* a vignetta a tartalomra összpontosít */
-#bg::after { z-index: 3; background: linear-gradient(180deg, rgba(9, 7, 22, 0), rgba(9, 7, 22, .22) 60%, rgba(9, 7, 22, .45)); }
+#bg::after { z-index: 3; background: linear-gradient(180deg, rgba(7,9,13, 0), rgba(7,9,13, .22) 60%, rgba(7,9,13, .45)); }
 #bgImg { opacity: .32; }
 
 body.fx-off .fx-mesh i, body.fx-lite .fx-mesh i { animation-play-state: paused; }
@@ -163,3 +163,124 @@ body.fx-off .placeholder:has(.spinner)::after { animation: none; }
 
 /* a háttér-réteg (#bg) csak akkor látszik, ha a body nem fed le mindent: az <html> adja az alapszínt */
 body { background: transparent !important; }
+
+/* ================================================================ PREMIUM GAMING réteg (v3.31)
+   Mélyfekete/grafit alap, arany + elektromos kék kiemelés, AAA-kliens hangulat. Csak felülírás + új díszek. */
+:root {
+  --gold-1: #f0e6d2; --gold-2: #e6c98a; --gold-3: #c8aa6e; --gold-4: #9a7632; --gold-5: #5c4620;
+  --blue-1: #7fd6ff; --blue-2: #19b4ff; --blue-3: #0a6fb8;
+  --gold-grad: linear-gradient(180deg, #f3dca0 0%, #d4b06a 48%, #9a7632 100%);
+  --frame: linear-gradient(160deg, rgba(240,230,210,.55), rgba(200,170,110,.28) 30%, rgba(90,70,32,.35) 62%, rgba(25,180,255,.38));
+}
+html { background: #06080c; }
+body { letter-spacing: .01em; }
+/* tipográfia: Cinzel címek, Rajdhani számok/feliratok */
+.brand span, .side-brand, .champ-name, .ch-title, .soon h2, #page-tierlist h1, #page-meta h1, .drawer-h h2 { font-family: var(--font-t); font-weight: 700; }
+.card-h h2 { font-family: var(--font-t); font-weight: 600; letter-spacing: .14em; color: var(--gold-1); font-size: 12.5px; }
+.champ-name { font-size: 30px; letter-spacing: .06em; text-transform: uppercase; background: linear-gradient(180deg, #fff 10%, var(--gold-1) 55%, var(--gold-3)); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none; filter: drop-shadow(0 3px 14px rgba(3,4,7,.9)) drop-shadow(0 0 22px rgba(var(--champ-rgb), .35)); }
+.kpi .v, .prof .nm, .hero-wr b, .donut .c b, .wr, .num { font-family: "Rajdhani", var(--font-d); font-weight: 700; letter-spacing: .02em; }
+.kpi .v { font-size: 21px; }
+.kpi .l, .kpi small, .sub-h, .donut .c span { letter-spacing: .12em; text-transform: uppercase; font-family: "Rajdhani", var(--font); font-weight: 600; }
+
+/* keretek: arany fém-szegély (gradiens border) + felső fényél */
+.glass, .card, .rk, .kpi, .prof, .summary, .lp-card, .set-sec, .ig-card, .cs-head, .cs-pick, .empty {
+  background: linear-gradient(var(--glass-top), var(--glass-bot)) padding-box, var(--frame) border-box !important;
+  border: 1px solid transparent !important; border-radius: 12px; position: relative;
+  box-shadow: inset 0 1px 0 rgba(255, 244, 214, .09), 0 1px 0 rgba(0,0,0,.5), 0 24px 40px -24px rgba(0,0,0,.95) !important;
+}
+.card::before { content: "" !important; display: block !important; position: absolute; left: 14px; right: 14px; top: 0; height: 1px; border: 0 !important; border-radius: 0 !important;
+  background: linear-gradient(90deg, transparent, rgba(240,230,210,.7), transparent); opacity: .55; pointer-events: none; transition: opacity .4s; }
+.card:hover::before { opacity: 1; }
+.card:hover, .glass:hover, .rk:hover, .kpi:hover, .lp-card:hover, .summary:hover, .prof:hover {
+  border-color: transparent !important;
+  box-shadow: inset 0 1px 0 rgba(255,244,214,.14), 0 1px 0 rgba(0,0,0,.5), 0 28px 46px -24px rgba(0,0,0,.95), 0 0 38px -12px rgba(var(--champ-rgb), .45) !important;
+}
+/* animált, izzó keret: hőskártyák, hero, aktív elemek – forgó kúpos fény a szegélyen */
+@property --ang { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+.hero, .fav.sel, .tier-row:hover, .ch-tile:hover, .try-c:hover { position: relative; }
+.fx-glow { position: relative; }
+.card::after, .kpi::after, .prof::after, .lp-card::after, .summary::after, .hero::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; pointer-events: none; z-index: 4;
+  background: conic-gradient(from var(--ang), transparent 0 62%, rgba(25,180,255,.9) 76%, rgba(240,230,210,.95) 88%, transparent 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: angSpin 6s linear infinite; opacity: .0; transition: opacity .5s; }
+.card:hover::after, .kpi:hover::after, .prof:hover::after, .lp-card:hover::after, .summary:hover::after { opacity: 1; }
+.hero::before { opacity: .55; border-radius: 0; }
+@keyframes angSpin { to { --ang: 360deg; } }
+body.fx-off .card::after, body.fx-off .kpi::after, body.fx-off .hero::before, body.fx-lite .card::after, body.fx-lite .kpi::after, body.fx-lite .hero::before { animation: none; }
+
+.tier-row, .crow, .mrow, .try-c, .ch-tile { border: 1px solid rgba(200,170,110,.16) !important; border-radius: 10px; }
+.tier-row:hover, .ch-tile:hover, .try-c:hover { border-color: rgba(230,201,138,.7) !important; }
+.card-h .ico { background: linear-gradient(145deg, #3a3020, #14171e) !important; color: var(--gold-2) !important; border: 1px solid rgba(200,170,110,.45); box-shadow: inset 0 1px 0 rgba(255,244,214,.18), 0 0 16px -4px rgba(var(--champ-rgb), .55) !important; }
+.card-h::after { background: linear-gradient(90deg, rgba(200,170,110,.5), transparent) !important; }
+
+/* gombok: elsődleges = arany fém, másodlagos = sötét üveg arany éllel */
+.btn { font-family: "Rajdhani", var(--font); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border-radius: 8px;
+  background: linear-gradient(180deg, #232832, #141820); border: 1px solid rgba(200,170,110,.45); color: var(--gold-1); }
+.btn:hover { background: linear-gradient(180deg, #2c313c, #181c25); border-color: var(--gold-2); color: #fff; box-shadow: 0 0 22px -4px rgba(var(--champ-rgb), .55), inset 0 1px 0 rgba(255,244,214,.12); }
+.lo-act .btn, .btn.cta, [data-ed="save"], [data-rsave], [data-cb="new"], .ed-foot .btn:last-child, .bug-box .btn[data-bug="send"] {
+  background: var(--gold-grad) !important; color: #1b1407 !important; border: 1px solid #f3dca0 !important; text-shadow: 0 1px 0 rgba(255,255,255,.35);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.55), 0 8px 18px -8px rgba(200,170,110,.7) !important; position: relative; overflow: hidden; }
+.lo-act .btn::after, .btn.cta::after, [data-ed="save"]::after, [data-rsave]::after, [data-cb="new"]::after { content: ""; position: absolute; top: 0; bottom: 0; width: 40%; left: -60%; pointer-events: none;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.55), transparent); transform: skewX(-18deg); transition: left .7s var(--ease-out); }
+.lo-act .btn:hover::after, .btn.cta:hover::after, [data-ed="save"]:hover::after, [data-rsave]:hover::after, [data-cb="new"]:hover::after { left: 130%; }
+.lo-act .btn:hover, .btn.cta:hover, [data-ed="save"]:hover, [data-rsave]:hover, [data-cb="new"]:hover { filter: brightness(1.08); box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 10px 26px -6px rgba(230,201,138,.8) !important; }
+.btn.ghost { background: transparent !important; color: var(--muted); border-color: rgba(200,170,110,.25); }
+.btn.ghost:hover { color: var(--gold-1); border-color: var(--gold-3); }
+.seg .cnt { background: var(--gold-3); color: #1b1407; }
+
+/* navigáció: arany jelző + kék izzás az aktív ikonon */
+.sidebar { background: linear-gradient(180deg, rgba(14,17,23,.86), rgba(7,9,13,.55)) !important; border-right: 1px solid rgba(200,170,110,.14); }
+.sidebar .side-btn { font-family: "Rajdhani", var(--font); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; font-size: 13px; }
+.nav-ind { background: linear-gradient(90deg, rgba(200,170,110,.26), rgba(25,180,255,.05)); box-shadow: inset 0 0 0 1px rgba(200,170,110,.42), 0 0 28px -8px rgba(200,170,110,.6); border-radius: 8px; }
+.nav-ind::after { background: linear-gradient(180deg, var(--blue-1), var(--blue-2)); box-shadow: 0 0 12px var(--blue-2); }
+.sidebar .side-btn.on svg { filter: drop-shadow(0 0 7px rgba(25,180,255,.85)); color: var(--gold-1); }
+.side-brand img { filter: drop-shadow(0 0 12px rgba(200,170,110,.6)); }
+
+/* hero: arany alsó él + cinematikus vignetta */
+.hero { border-bottom: 1px solid rgba(200,170,110,.35) !important; }
+.hero-glow { background: radial-gradient(60% 90% at 20% 100%, rgba(var(--champ-rgb), .22), transparent 70%), linear-gradient(180deg, transparent 40%, rgba(6,8,12,.85)) !important; }
+
+/* csíkok, sávok: arany→kék gradiens, csillanó fény, növekvő animáció */
+.ap, .ad, .w { background-image: linear-gradient(90deg, var(--gold-4), var(--gold-2)); }
+.ap { background-image: linear-gradient(90deg, var(--blue-3), var(--blue-2)); }
+.w { background-image: linear-gradient(90deg, var(--blue-3), var(--blue-2) 55%, var(--blue-1)); }
+.ap, .ad, .w, .l { position: relative; overflow: hidden; }
+.w::after, .ap::after, .ad::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 30%, rgba(255,255,255,.35) 50%, transparent 70%); transform: translateX(-100%); animation: shimmer 3.8s var(--ease-out) infinite; }
+@keyframes shimmer { 55%, 100% { transform: translateX(100%); } }
+body.fx-off .w::after, body.fx-off .ap::after, body.fx-off .ad::after, body.fx-lite .w::after, body.fx-lite .ap::after, body.fx-lite .ad::after { animation: none; display: none; }
+
+/* diagramok: LP-vonal kirajzolódik, a donut feltöltődik */
+.fx-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: drawIn 1.6s var(--ease-out) .15s forwards; filter: drop-shadow(0 0 6px rgba(25,180,255,.55)); }
+.fx-area { opacity: 0; animation: fadeIn 1.2s ease .6s forwards; }
+@keyframes drawIn { to { stroke-dashoffset: 0; } }
+@keyframes fadeIn { to { opacity: 1; } }
+.fx-donut { animation: donutIn 1.4s var(--ease-out) both; filter: drop-shadow(0 0 7px rgba(25,180,255,.45)); }
+@keyframes donutIn { from { stroke-dasharray: 0 400; } }
+body.fx-off .fx-draw { animation: none; stroke-dashoffset: 0; }
+body.fx-off .fx-area { animation: none; opacity: 1; }
+body.fx-off .fx-donut { animation: none; }
+
+/* kozmetika: kijelölés, fókusz, görgetősáv */
+::selection { background: rgba(200,170,110,.5); color: #fff; }
+:focus-visible { outline: 2px solid var(--blue-2); outline-offset: 2px; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #3a3325, #231f16); }
+::-webkit-scrollbar-thumb:hover { background: #8a6d34; }
+
+/* oldalváltás: arany fénysöprés + belépés */
+.fx-sweep { position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: 0;
+  background: linear-gradient(100deg, transparent 38%, rgba(230,201,138,.10) 46%, rgba(127,214,255,.14) 50%, rgba(230,201,138,.10) 54%, transparent 62%); transform: translateX(-120%); }
+.fx-sweep.go { animation: sweep .75s var(--ease-out); }
+@keyframes sweep { 0% { opacity: 1; transform: translateX(-120%); } 100% { opacity: 0; transform: translateX(120%); } }
+.page.fx-page { animation: fxPage .6s var(--ease-out) both; }
+@keyframes fxPage { from { opacity: 0; transform: translate3d(0, 14px, 0) scale(.992); } to { opacity: 1; transform: none; } }
+body.fx-off .fx-sweep { display: none; }
+
+/* nyitó intro */
+.fx-intro { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; background: radial-gradient(60% 60% at 50% 50%, #11151d, #05070a); transition: opacity .8s ease .15s, visibility 0s .95s; }
+.fx-intro.out { opacity: 0; visibility: hidden; }
+.fx-intro .lg { text-align: center; font-family: var(--font-t); letter-spacing: .5em; text-transform: uppercase; color: var(--gold-1); animation: introIn 1.1s var(--ease-out) both; }
+.fx-intro .lg b { display: block; font-size: 38px; letter-spacing: .34em; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 22px rgba(200,170,110,.45)); }
+.fx-intro .lg i { display: block; margin: 14px auto 0; height: 1px; width: 0; background: linear-gradient(90deg, transparent, var(--blue-2), var(--gold-2), transparent); animation: introLine 1.2s var(--ease-out) .25s forwards; }
+@keyframes introIn { from { opacity: 0; transform: translateY(10px) scale(.96); letter-spacing: .7em; } }
+@keyframes introLine { to { width: 320px; } }
+body.fx-off .fx-intro { display: none; }
