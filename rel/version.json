@@ -1,15 +1,15 @@
 {
-  "version": "3.29.0",
-  "notes": "Új: Tilt-őr (szünet-jelzés vereségsorozat/LP/játékidő alapján), hőskészlet-edző (kire koncentrálj, ki ellen veszítesz), megosztható játék utáni összefoglaló kártya (kép mentése/másolása).",
+  "version": "3.30.0",
+  "notes": "Új megjelenés: Rift-köd téma – animált aurora-háttér, hex-rács a kurzornál, csillagpor, lebegő 3D kristály, 3D tilt kártyák, mágneses gombok, csúszó navigáció, lépcsős belépő-animációk. Beállítások: Effektek (Teljes / Automatikus / Könnyített).",
   "files": {
     "mayhem_tiers.txt": "f1ffd6e2970b7894f501e5302c485c1e9bbc062ba9e2391a56afc00f7c6fe946",
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_29_0.cp312-win_amd64.pyd": "872c5b2e14ebea897506c2f896e0d84d50407df6698d97b00b7dd1cfc787d8a0",
-    "server.py": "00add456d09d9bbba0643b39d74ea8402080dd6028800aed8cff9092aa20597c",
-    "web/app.js": "822ffd4a4ee61590c5f1b960c2656327e5f1bfb4c2833992c2afde9e97e2b255",
+    "rmcore_3_30_0.cp312-win_amd64.pyd": "6980d41f68bc87de6916d4116510b9f788dac829317f7c487a84d33d012c98c4",
+    "server.py": "059396c86bb390c924c6cd25c8829604ac96f0997dc69bc70b0e98888b876f98",
+    "web/app.js": "084fe0a4d88cab44813e36de4ef1c4c8d8671c82b467af17d370f9b4d1dbbbcc",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
-    "web/index.html": "478f6241f60101d585d403b3d0019bf002eb0e779c898d33a7f4b8b7dec6af1e",
+    "web/index.html": "8bca72b7d525a90ff125cec62ff1edd51d5e91e7d1c723e288aa505f526ffa51",
     "web/logo.svg": "d4b2d0b7f0b9adb8a599ca208917b51c33a175e76154fa142fbd8a761ec76cd0",
-    "web/style.css": "8262bacba23263fb7337e43d4824a7329342671c8049e6174efd22a96e51a333"
+    "web/style.css": "b7870d61c98bc28352b4af5fa5fba51a54a7eab919103871062cb1acf45e222e"
   }
 }
