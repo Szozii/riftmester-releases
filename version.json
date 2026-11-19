@@ -1,17 +1,17 @@
 {
-  "version": "3.31.0",
-  "notes": "Új megjelenés: Premium Gaming – mélyfekete/grafit alap, arany és elektromos kék kiemelések, animált izzó keretek, 3D dőlés, fénykövető háttér, cinematikus oldalváltás és nyitó intro, animált diagramok és sávok.",
+  "version": "3.31.1",
+  "notes": "Finomhangolás: a 3D-dőlés és a mágneses hatás csak a főképernyőn, a kiemelt kártyákon és a fő műveleti gombokon marad; a listák, táblák és egyéb elemek gyorsabbak, nyugodtabbak.",
   "files": {
     "mayhem_tiers.txt": "f1ffd6e2970b7894f501e5302c485c1e9bbc062ba9e2391a56afc00f7c6fe946",
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_31_0.cp312-win_amd64.pyd": "bc17647cf081cf99b469ee6b99d2603cf0690b2cd4eb342d9eebed8eae344fc4",
-    "server.py": "080bf8549ef9e83331295588fea8b9638c2e22dc6aaf7fbf9f0ee7bcc07fab1a",
+    "rmcore_3_31_1.cp312-win_amd64.pyd": "c0ef7ae4009133f29f9d01f2204ed3605d2575168632417169f2553d3c8f3668",
+    "server.py": "97d0bf91b8da57f5e0ccf305890e6e7920592877c044eca879923d6ffcfc800f",
     "web/app.js": "69a2c41e73a481b634a555e76927845f74fe7db78d3f0b9ac4c16fbd5420a739",
-    "web/fx.css": "343214b8e8159745847c978526f4f25e4154a018fed96d76ec8a72a123f6769e",
-    "web/fx.js": "da6b8699831bef199545041a42d89332338d6eda6a0379ac1adab4731a7f34e3",
+    "web/fx.css": "52639c20051ebb76b97da033ea2197c113b8edc947d0abd540415ca7420cea5e",
+    "web/fx.js": "7380ca63a13b4463f52572792cb24f5cad89319d0e5863223eb211db52ac9bec",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "e727de5f3982eb715b00fda03433fb2436337c819a2ffd66a8be2e40f47133dd",
-    "web/logo.svg": "d4b2d0b7f0b9adb8a599ca208917b51c33a175e76154fa142fbd8a761ec76cd0",
+    "web/logo.svg": "f861d08e48aa3b2c86d6517a3a1fc811560f70b64ccaca8b5188b595dd8b87b2",
     "web/style.css": "049e115e38bffcfd5215f3f0f3a11bb385b1279aafb199ff3b1ba415be3583a3"
   }
 }
