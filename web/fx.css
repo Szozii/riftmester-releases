@@ -284,3 +284,39 @@ body.fx-off .fx-sweep { display: none; }
 @keyframes introIn { from { opacity: 0; transform: translateY(10px) scale(.96); letter-spacing: .7em; } }
 @keyframes introLine { to { width: 320px; } }
 body.fx-off .fx-intro { display: none; }
+
+/* ================================================================ Patch notes oldal */
+.pn-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin: 4px 0 14px; }
+.pn-head .ch-title small { font-family: var(--font-d); color: var(--gold-2); letter-spacing: .08em; }
+.pn-chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.pn-chips .ch-chip small { opacity: .6; margin-left: 4px; }
+.pn-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin: 10px 0; }
+.pn-search { width: 230px; } .pn-search input { background: none; border: 0; outline: 0; color: var(--text); font: inherit; width: 100%; }
+.pn-warn { padding: 9px 14px; border-radius: 10px; margin: 8px 0; font-size: 12.5px; color: var(--gold-1); border: 1px solid rgba(200,170,110,.35); background: rgba(200,170,110,.08); }
+.pn-sum { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 4px; }
+.pn-sum span { padding: 8px 16px; border-radius: 10px; font: 700 15px "Rajdhani", var(--font); letter-spacing: .06em; border: 1px solid; background: rgba(11,13,19,.7); }
+.pn-sum .up { color: #5fe0a4; border-color: rgba(52,211,153,.45); } .pn-sum .dn { color: #ff7a8c; border-color: rgba(255,90,110,.45); }
+.pn-sum .ad { color: var(--blue-1); border-color: rgba(25,180,255,.45); } .pn-sum .nw { color: var(--gold-2); border-color: rgba(200,170,110,.5); }
+.pn-intro { color: var(--muted); font-size: 13.5px; max-width: 900px; margin: 6px 0 4px; }
+.pn-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 12px; margin-top: 12px; align-items: start; }
+.pn-card { border: 1px solid rgba(200,170,110,.2); border-left: 3px solid var(--g4); border-radius: 12px; padding: 12px 14px 8px;
+  background: linear-gradient(160deg, rgba(24,28,38,.85), rgba(11,13,19,.9)); }
+.pn-card.v-buff { border-left-color: #34d399; } .pn-card.v-nerf { border-left-color: #ff5a6e; } .pn-card.v-adjust { border-left-color: var(--b2); } .pn-card.v-new { border-left-color: var(--g2); }
+.pn-card.mine { box-shadow: 0 0 0 1px rgba(230,201,138,.6), 0 0 26px -10px rgba(200,170,110,.6); }
+.pn-card header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.pn-card header img { width: 38px; height: 38px; border-radius: 9px; border: 1px solid rgba(200,170,110,.5); }
+.pn-nm { flex: 1; min-width: 0; } .pn-nm h3 { margin: 0; font: 700 16px var(--font-t); letter-spacing: .04em; color: var(--gold-1); } .pn-nm small { color: var(--dim); font-size: 11px; }
+.pn-badge { font: 700 11.5px "Rajdhani", var(--font); letter-spacing: .1em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; border: 1px solid rgba(200,170,110,.35); color: var(--muted); white-space: nowrap; }
+.v-buff .pn-badge { color: #5fe0a4; border-color: rgba(52,211,153,.5); } .v-nerf .pn-badge { color: #ff7a8c; border-color: rgba(255,90,110,.5); }
+.v-adjust .pn-badge { color: var(--blue-1); border-color: rgba(25,180,255,.5); } .v-new .pn-badge { color: var(--gold-2); }
+.pn-go { width: 28px; height: 28px; border-radius: 8px; border: 1px solid rgba(200,170,110,.4); background: rgba(14,17,23,.8); color: var(--gold-1); cursor: pointer; font-size: 18px; line-height: 1; }
+.pn-go:hover { border-color: var(--gold-2); box-shadow: 0 0 16px -4px rgba(200,170,110,.7); }
+.pn-note { margin: 4px 0 8px; font-size: 12.5px; font-style: italic; color: var(--muted); }
+.pn-card h4 { margin: 8px 0 3px; font: 700 12px "Rajdhani", var(--font); letter-spacing: .12em; text-transform: uppercase; color: var(--g3); }
+.pn-card ul { list-style: none; margin: 0 0 4px; padding: 0; }
+.pn-card li { display: flex; gap: 7px; padding: 3px 0; font-size: 12.5px; line-height: 1.45; color: var(--text); }
+.pn-card li.lv1 { padding-left: 16px; } .pn-card li.lv2 { padding-left: 30px; }
+.pn-card li b { color: var(--gold-1); font-weight: 650; }
+.pn-ar { color: var(--blue-2); margin: 0 3px; font-weight: 700; }
+.pn-d { flex: none; width: 12px; font-style: normal; font-size: 9px; line-height: 1.9; } .pn-d.up { color: #34d399; } .pn-d.dn { color: #ff5a6e; } .pn-d.nw { color: var(--gold-2); }
+.pn-foot { margin-top: 18px; font-size: 12px; } .pn-foot a { color: var(--gold-2); }

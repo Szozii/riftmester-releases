@@ -1,16 +1,16 @@
 {
-  "version": "3.31.1",
-  "notes": "Finomhangolás: a 3D-dőlés és a mágneses hatás csak a főképernyőn, a kiemelt kártyákon és a fő műveleti gombokon marad; a listák, táblák és egyéb elemek gyorsabbak, nyugodtabbak.",
+  "version": "3.32.0",
+  "notes": "Új menüpont: Patch notes – a Riot hivatalos patch notes cikke, erősödött/gyengült/kiigazítva jelöléssel, hősönként",
   "files": {
     "mayhem_tiers.txt": "f1ffd6e2970b7894f501e5302c485c1e9bbc062ba9e2391a56afc00f7c6fe946",
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_31_1.cp312-win_amd64.pyd": "c0ef7ae4009133f29f9d01f2204ed3605d2575168632417169f2553d3c8f3668",
-    "server.py": "97d0bf91b8da57f5e0ccf305890e6e7920592877c044eca879923d6ffcfc800f",
-    "web/app.js": "69a2c41e73a481b634a555e76927845f74fe7db78d3f0b9ac4c16fbd5420a739",
-    "web/fx.css": "52639c20051ebb76b97da033ea2197c113b8edc947d0abd540415ca7420cea5e",
+    "rmcore_3_32_0.cp312-win_amd64.pyd": "8a9010a98ba06e3e70dfb968a22fba9bf74d3b1c0ad06da97754690293dcbd58",
+    "server.py": "6b247d545fd19f9124f0d616c69dd846a22944988d0ceb1dc14799c58e0dae70",
+    "web/app.js": "6d495b683d650cc3c184ccc4cf8924eadac874a58011dbd3159d99b22d60d203",
+    "web/fx.css": "a2c0e8bd5fa910f46c836496257be2fc46e438197c3a9089af2545820278f716",
     "web/fx.js": "7380ca63a13b4463f52572792cb24f5cad89319d0e5863223eb211db52ac9bec",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
-    "web/index.html": "e727de5f3982eb715b00fda03433fb2436337c819a2ffd66a8be2e40f47133dd",
+    "web/index.html": "e6d5071fedfe153dd18ceef5b7ec125e576a16da501959772b6ed4f35b659480",
     "web/logo.svg": "f861d08e48aa3b2c86d6517a3a1fc811560f70b64ccaca8b5188b595dd8b87b2",
     "web/style.css": "049e115e38bffcfd5215f3f0f3a11bb385b1279aafb199ff3b1ba415be3583a3"
   }
