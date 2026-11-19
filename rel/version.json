@@ -1,11 +1,11 @@
 {
-  "version": "3.32.0",
-  "notes": "Új menüpont: Patch notes – a Riot hivatalos patch notes cikke, erősödött/gyengült/kiigazítva jelöléssel, hősönként",
+  "version": "3.32.1",
+  "notes": "Patch notes: javítva az éles Riot-oldal beolvasása (szakaszcímek), most már megjelennek a változások",
   "files": {
     "mayhem_tiers.txt": "f1ffd6e2970b7894f501e5302c485c1e9bbc062ba9e2391a56afc00f7c6fe946",
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_32_0.cp312-win_amd64.pyd": "8a9010a98ba06e3e70dfb968a22fba9bf74d3b1c0ad06da97754690293dcbd58",
-    "server.py": "6b247d545fd19f9124f0d616c69dd846a22944988d0ceb1dc14799c58e0dae70",
+    "rmcore_3_32_1.cp312-win_amd64.pyd": "a21d61fd45c5e1b51038552b306b65ada27388fa42f07a51310f7e1e80a04a60",
+    "server.py": "37cbfdd9e2fdbe2a1ca308c4a48137415ca0063aa5e6eaee2a779e848618224b",
     "web/app.js": "6d495b683d650cc3c184ccc4cf8924eadac874a58011dbd3159d99b22d60d203",
     "web/fx.css": "a2c0e8bd5fa910f46c836496257be2fc46e438197c3a9089af2545820278f716",
     "web/fx.js": "7380ca63a13b4463f52572792cb24f5cad89319d0e5863223eb211db52ac9bec",
