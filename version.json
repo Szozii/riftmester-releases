@@ -1,15 +1,15 @@
 {
-  "version": "3.28.1",
-  "notes": "Javítás: SSL tanúsítványhiba (CERTIFICATE_VERIFY_FAILED) miatt nem töltődtek le az alapadatok egyes gépeken.",
+  "version": "3.29.0",
+  "notes": "Új: Tilt-őr (szünet-jelzés vereségsorozat/LP/játékidő alapján), hőskészlet-edző (kire koncentrálj, ki ellen veszítesz), megosztható játék utáni összefoglaló kártya (kép mentése/másolása).",
   "files": {
     "mayhem_tiers.txt": "f1ffd6e2970b7894f501e5302c485c1e9bbc062ba9e2391a56afc00f7c6fe946",
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_28_1.cp312-win_amd64.pyd": "4f38fe94dad7df0446dc5233a51bf44b70a5cd2f09df81bac3db9ad55d9599c4",
-    "server.py": "a8e501b771d1a68c7ace5af6725f20a84677189e871e952262a73d123655ff10",
-    "web/app.js": "c8728db20911eec6691be438719f10d5931e757e7a193fa92a993be673640f25",
+    "rmcore_3_29_0.cp312-win_amd64.pyd": "872c5b2e14ebea897506c2f896e0d84d50407df6698d97b00b7dd1cfc787d8a0",
+    "server.py": "00add456d09d9bbba0643b39d74ea8402080dd6028800aed8cff9092aa20597c",
+    "web/app.js": "822ffd4a4ee61590c5f1b960c2656327e5f1bfb4c2833992c2afde9e97e2b255",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "478f6241f60101d585d403b3d0019bf002eb0e779c898d33a7f4b8b7dec6af1e",
     "web/logo.svg": "d4b2d0b7f0b9adb8a599ca208917b51c33a175e76154fa142fbd8a761ec76cd0",
-    "web/style.css": "75fa8f126edce0b67ca322fd415dc7f7c203ee4e65dafb2097ea136aedc7dcfe"
+    "web/style.css": "8262bacba23263fb7337e43d4824a7329342671c8049e6174efd22a96e51a333"
   }
 }

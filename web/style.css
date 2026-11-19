@@ -1597,3 +1597,23 @@ body.fx-off .glow, body.in-game .glow, body.fx-off #bg .glow.g3, body.in-game #b
 body.fx-off #bgImg, body.in-game #bgImg { filter: none; opacity: .18; will-change: auto; }
 body.fx-off #bg::before, body.in-game #bg::before { display: none; }
 body.fx-off .hero-img, body.in-game .hero-img { will-change: auto; }
+
+/* ---- Tilt-őr, hőskészlet-edző, összefoglaló kártya ---- */
+.tilt { display: flex; gap: 14px; align-items: flex-start; padding: 14px 18px; margin: 14px 0 12px; border-left: 4px solid var(--good); }
+.tilt .tl-dot { width: 12px; height: 12px; border-radius: 50%; margin-top: 4px; background: var(--good); box-shadow: 0 0 10px var(--good); flex: none; }
+.tilt.tl-warn { border-left-color: #fbbf24; } .tilt.tl-warn .tl-dot { background: #fbbf24; box-shadow: 0 0 10px #fbbf24; }
+.tilt.tl-stop { border-left-color: var(--bad); } .tilt.tl-stop .tl-dot { background: var(--bad); box-shadow: 0 0 10px var(--bad); }
+.tilt b { font-size: 13.5px; }
+.tl-sub { font-size: 12px; color: var(--muted); margin-top: 3px; }
+.tl-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.tl-chip { font-size: 11px; padding: 3px 9px; border-radius: 999px; background: rgba(255,255,255,.07); }
+.pool-sec { margin-bottom: 10px; }
+.pool-h { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 4px 0 6px; }
+.pool-n { font-style: normal; font-size: 10px; color: var(--muted); }
+.pool-notes { margin: 6px 0 0; padding-left: 18px; font-size: 12px; color: var(--muted); }
+.mrow { grid-template-columns: 4px 32px 1fr auto auto; }
+.mc-btn { background: transparent; border: 1px solid var(--line); color: var(--muted); border-radius: 8px; width: 28px; height: 28px; cursor: pointer; display: grid; place-items: center; }
+.mc-btn:hover { color: #fff; border-color: rgba(167,139,250,.6); }
+.mc-btn .i { width: 14px; height: 14px; }
+.mc-box { width: min(620px, 96vw); }
+.mc-canvas { width: 100%; height: auto; border-radius: 12px; display: block; margin-bottom: 10px; }
