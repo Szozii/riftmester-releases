@@ -1,11 +1,11 @@
 {
-  "version": "3.28.0",
-  "notes": "Webes változat támogatás: a zoltanszatmari.hu/riftmester oldal felismeri a futó appot (helyi kapcsolat, csak a saját oldalról).",
+  "version": "3.28.1",
+  "notes": "Javítás: SSL tanúsítványhiba (CERTIFICATE_VERIFY_FAILED) miatt nem töltődtek le az alapadatok egyes gépeken.",
   "files": {
     "mayhem_tiers.txt": "f1ffd6e2970b7894f501e5302c485c1e9bbc062ba9e2391a56afc00f7c6fe946",
     "OLVASS_EL.txt": "54e0b24c9f8b9108f4e7f37547a3b8ab169b63b39de87fac4528921f906a4a21",
-    "rmcore_3_28_0.cp312-win_amd64.pyd": "e0e2b6c7c4e5e49959a46a225a091b5bd9768e9de2a66b644799e2da6e993240",
-    "server.py": "8847c3e616112aa7f634b665511945c1c32da787a5b536791f2c84e7af255efd",
+    "rmcore_3_28_1.cp312-win_amd64.pyd": "4f38fe94dad7df0446dc5233a51bf44b70a5cd2f09df81bac3db9ad55d9599c4",
+    "server.py": "a8e501b771d1a68c7ace5af6725f20a84677189e871e952262a73d123655ff10",
     "web/app.js": "c8728db20911eec6691be438719f10d5931e757e7a193fa92a993be673640f25",
     "web/i18n.js": "05767ae19015cf7e7ca830070a658eb7e29e3d0fc7fc8f124076485e64503017",
     "web/index.html": "478f6241f60101d585d403b3d0019bf002eb0e779c898d33a7f4b8b7dec6af1e",
