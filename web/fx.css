@@ -1,0 +1,165 @@
+/* ================================================================ RiftMester – "Rift-köd" vizuális réteg (fx.css)
+   A meglévő felület FÖLÉ épül, semmit nem vált ki: csak felülírja a kinézetet és új rétegeket ad hozzá.
+   Elvek: csak transform/opacity animáció (GPU), nincs backdrop-filter / blur-szűrő, a nehéz részek (canvas)
+   az fx.js-ben futnak és a body.fx-off / body.fx-lite osztállyal leállíthatók. */
+
+:root {
+  --spring: cubic-bezier(.34, 1.56, .64, 1);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --glass-hi: rgba(255, 255, 255, .07);
+  --glass-top: rgba(36, 32, 84, .74);
+  --glass-bot: rgba(15, 13, 38, .66);
+  --edge: rgba(167, 139, 250, .16);
+  --rift-cyan: 34, 211, 238;
+  --rift-violet: 139, 92, 246;
+  --rift-rose: 251, 113, 133;
+}
+@supports (transition-timing-function: linear(0, 1)) {
+  :root { --spring: linear(0, .009, .035 2.1%, .141, .281 6.7%, .723 12.9%, .938 16.7%, 1.017, 1.077, 1.121, 1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%, 1.051 39.6%, 1.017 43.1%, .991, .977 51%, .974 53.8%, .975 57.1%, .997 69.8%, 1.003 76.9%, 1.004 83.8%, 1); }
+}
+
+/* ---------------------------------------------------------------- design system: rétegezett üveg */
+.glass, .card, .rk, .kpi, .prof, .summary, .lp-card, .tilt, .set-sec, .ig-card, .cs-head, .cs-pick, .es-row, .empty {
+  background: linear-gradient(158deg, var(--glass-top), var(--glass-bot)) !important;
+  border-color: var(--edge) !important;
+  box-shadow:
+    inset 1px 1px 0 var(--glass-hi),
+    inset 0 0 0 1px rgba(255, 255, 255, .015),
+    0 1px 0 rgba(0, 0, 0, .4),
+    0 22px 38px -22px rgba(3, 0, 12, .85),
+    0 0 0 0 rgba(var(--champ-rgb), 0) !important;
+  transition: border-color .35s, box-shadow .45s var(--ease-out), transform .55s var(--spring);
+}
+.card:hover, .glass:hover, .rk:hover, .kpi:hover, .lp-card:hover, .summary:hover, .prof:hover {
+  border-color: rgba(var(--champ-rgb), .42) !important;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, .1),
+    0 1px 0 rgba(0, 0, 0, .4),
+    0 26px 44px -22px rgba(3, 0, 12, .9),
+    0 0 34px -10px rgba(var(--champ-rgb), .38) !important;
+}
+.tier-row, .crow, .mrow, .try-c, .ch-tile {
+  background: linear-gradient(160deg, rgba(34, 30, 80, .6), rgba(14, 12, 36, .55)) !important;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .05), 0 12px 22px -16px rgba(3, 0, 12, .9);
+}
+.fav { box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .06), 0 14px 24px -14px rgba(3, 0, 12, .95); }
+.tier-row:hover, .ch-tile:hover, .try-c:hover { border-color: rgba(var(--champ-rgb), .75) !important; box-shadow: inset 1px 1px 0 rgba(255,255,255,.08), 0 16px 30px -14px rgba(3,0,12,.95), 0 0 26px -6px rgba(var(--champ-rgb), .5) !important; }
+
+/* a fő gombok: folyékony fény + rugós lenyomás */
+.btn { transition: transform .5s var(--spring), box-shadow .3s, background .3s, border-color .3s; will-change: transform; }
+.btn:active { transform: scale(.94) !important; transition-duration: .08s; }
+.btn:not(.ghost):not(.small)::after, .btn.full::after { pointer-events: none; }
+
+/* címsorok: kicsit karakteresebb betű */
+.card-h h2, .ch-title, .tl-title, #page-tierlist h1, #page-meta h1 { letter-spacing: .09em; }
+.champ-name { text-shadow: 0 2px 30px rgba(var(--champ-rgb), .55), 0 3px 18px rgba(3, 0, 12, .9); }
+
+/* ---------------------------------------------------------------- háttér rétegek */
+#bg { background:
+  radial-gradient(90% 60% at 12% 0%, rgba(var(--rift-violet), .20), transparent 60%),
+  radial-gradient(70% 50% at 100% 100%, rgba(var(--rift-cyan), .12), transparent 62%),
+  radial-gradient(120% 80% at 50% 0%, #121839 0%, var(--bg) 62%); }
+.fx-mesh { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; contain: strict; }
+.fx-mesh i { position: absolute; width: 70vmax; height: 70vmax; border-radius: 50%; opacity: .55; will-change: transform; }
+.fx-mesh i:nth-child(1) { left: -22vmax; top: -30vmax; background: radial-gradient(closest-side, rgba(var(--rift-violet), .75), transparent); animation: meshA 26s ease-in-out infinite alternate; }
+.fx-mesh i:nth-child(2) { right: -26vmax; bottom: -34vmax; background: radial-gradient(closest-side, rgba(var(--rift-cyan), .5), transparent); animation: meshB 32s ease-in-out infinite alternate; }
+.fx-mesh i:nth-child(3) { left: 30vw; top: 38vh; width: 46vmax; height: 46vmax; background: radial-gradient(closest-side, rgba(var(--champ-rgb), .42), transparent); animation: meshC 38s ease-in-out infinite alternate; }
+@keyframes meshA { to { transform: translate3d(18vmax, 14vmax, 0) scale(1.18); } }
+@keyframes meshB { to { transform: translate3d(-20vmax, -12vmax, 0) scale(1.1); } }
+@keyframes meshC { 0% { transform: translate3d(-8vmax, 4vmax, 0) scale(.9); } 100% { transform: translate3d(14vmax, -10vmax, 0) scale(1.25); } }
+#fxCanvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+#fxSpot { position: absolute; left: 0; top: 0; width: 720px; height: 720px; margin: -360px 0 0 -360px; z-index: 2; pointer-events: none; opacity: 0;
+  background: radial-gradient(closest-side, rgba(var(--champ-rgb), .16), rgba(var(--champ-rgb), .05) 55%, transparent); will-change: transform, opacity; transition: opacity .6s; }
+#fxSpot.on { opacity: 1; }
+/* a vignetta a tartalomra összpontosít */
+#bg::after { z-index: 3; background: linear-gradient(180deg, rgba(9, 7, 22, 0), rgba(9, 7, 22, .22) 60%, rgba(9, 7, 22, .45)); }
+#bgImg { opacity: .32; }
+
+body.fx-off .fx-mesh i, body.fx-lite .fx-mesh i { animation-play-state: paused; }
+body.fx-off #fxCanvas, body.fx-off #fxSpot, body.fx-lite #fxCanvas, body.fx-lite #fxSpot { display: none; }
+
+/* ---------------------------------------------------------------- 3D lebegő kristály a hős-bannerben */
+.fx-crystal { position: absolute; right: 150px; bottom: 6px; width: 230px; height: 230px; pointer-events: none; z-index: 3;
+  filter: drop-shadow(0 0 22px rgba(var(--champ-rgb), .55)); opacity: 0; transition: opacity 1s; }
+.fx-crystal.on { opacity: .95; }
+body.fx-off .fx-crystal, body.fx-lite .fx-crystal { display: none; }
+@media (max-width: 900px) { .fx-crystal { display: none; } }
+
+/* ---------------------------------------------------------------- parallax a hero képén (translate: külön tulajdonság, nem ütközik a kenburns-szel) */
+.hero-img { translate: calc(var(--px, 0) * -16px) calc(var(--py, 0) * -10px + var(--sy, 0) * .14px); transition: translate .5s var(--ease-out); }
+body.fx-off .hero-img, body.fx-lite .hero-img { translate: none; }
+
+/* ---------------------------------------------------------------- navigáció: csúszó jelző */
+.sidebar { background: linear-gradient(180deg, rgba(18, 16, 46, .62), rgba(9, 8, 24, .3)) !important; position: sticky; }
+.nav-ind { position: absolute; left: 12px; top: 0; width: 192px; height: 42px; border-radius: 12px; pointer-events: none; z-index: 0; opacity: 0;
+  background: linear-gradient(90deg, rgba(var(--champ-rgb), .30), rgba(var(--champ-rgb), .06));
+  box-shadow: inset 0 0 0 1px rgba(var(--champ-rgb), .38), 0 0 26px -6px rgba(var(--champ-rgb), .6);
+  transition: transform .55s var(--spring), height .4s var(--spring), opacity .3s; will-change: transform; }
+.nav-ind.on { opacity: 1; }
+.nav-ind::after { content: ""; position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 3px; background: var(--champ); box-shadow: 0 0 12px var(--champ); }
+.sidebar .side-btn { z-index: 1; }
+.sidebar.has-ind .side-btn.on { background: none !important; }
+.sidebar.has-ind .side-btn.on::before { display: none; }
+.sidebar .side-btn svg { transition: transform .5s var(--spring), color .25s; }
+.sidebar .side-btn:hover svg { transform: scale(1.18) rotate(-6deg); }
+.sidebar .side-btn.on svg { transform: scale(1.08); filter: drop-shadow(0 0 6px rgba(var(--champ-rgb), .8)); }
+
+/* lebegő elemek */
+.side-brand img { animation: floatY 6s ease-in-out infinite; filter: drop-shadow(0 0 10px rgba(var(--champ-rgb), .55)); }
+.avatar { animation: avatarPulse 4.5s ease-in-out infinite; }
+@keyframes floatY { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-3px) rotate(2deg); } }
+@keyframes avatarPulse { 0%, 100% { box-shadow: 0 0 10px rgba(var(--champ-rgb), .25); } 50% { box-shadow: 0 0 22px rgba(var(--champ-rgb), .6); } }
+body.fx-off .side-brand img, body.fx-off .avatar, body.fx-lite .side-brand img, body.fx-lite .avatar { animation: none; }
+
+/* ---------------------------------------------------------------- belépő animációk (oldalváltás, lépcsőzés, scroll-reveal) */
+.fx-r { opacity: 0; transform: translate3d(0, 18px, 0) scale(.985); }
+.fx-in { animation: fxIn .7s var(--spring) both; animation-delay: calc(var(--i, 0) * 46ms); }
+@keyframes fxIn { from { opacity: 0; transform: translate3d(0, 18px, 0) scale(.985); } to { opacity: 1; transform: none; } }
+.page.fx-page { animation: fxPage .5s var(--ease-out) both; }
+@keyframes fxPage { from { opacity: 0; transform: translate3d(14px, 0, 0); } to { opacity: 1; transform: none; } }
+body.fx-off .fx-r { opacity: 1; transform: none; }
+body.fx-off .fx-in, body.fx-off .page.fx-page { animation: none; }
+
+/* növekvő sávok */
+.fx-grow { animation: fxGrow 1s var(--ease-out) both; animation-delay: calc(var(--i, 0) * 40ms + .15s); }
+@keyframes fxGrow { from { clip-path: inset(0 100% 0 0 round 4px); } to { clip-path: inset(0 0 0 0 round 4px); } }
+body.fx-off .fx-grow { animation: none; }
+
+/* ---------------------------------------------------------------- 3D tilt */
+.fx-tilt { transform-style: preserve-3d; transition: transform .08s linear; will-change: transform; }
+.fx-tilt.fx-rest { transition: transform .7s var(--spring); }
+.fx-mag { transition: transform .08s linear; }
+.fx-mag.fx-rest { transition: transform .6s var(--spring); }
+
+/* ---------------------------------------------------------------- visszajelzés */
+.fx-pulse { animation: fxPulse .55s var(--ease-out); }
+@keyframes fxPulse { 0% { box-shadow: 0 0 0 0 rgba(var(--champ-rgb), .55); } 100% { box-shadow: 0 0 0 16px rgba(var(--champ-rgb), 0); } }
+#toast { transition: transform .6s var(--spring), opacity .3s !important; }
+
+/* ---------------------------------------------------------------- skeleton betöltés */
+.placeholder:has(.spinner) { position: relative; padding-bottom: 20px; }
+.placeholder:has(.spinner)::after { content: ""; display: block; margin: 26px auto 0; width: min(560px, 90%); height: 150px; border-radius: 14px;
+  background:
+    linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, .09) 50%, transparent 70%) 0 0 / 220% 100% no-repeat,
+    linear-gradient(rgba(255, 255, 255, .05), rgba(255, 255, 255, .05)) 0 0 / 100% 38px no-repeat,
+    linear-gradient(rgba(255, 255, 255, .04), rgba(255, 255, 255, .04)) 0 56px / 78% 18px no-repeat,
+    linear-gradient(rgba(255, 255, 255, .04), rgba(255, 255, 255, .04)) 0 86px / 92% 18px no-repeat,
+    linear-gradient(rgba(255, 255, 255, .04), rgba(255, 255, 255, .04)) 0 116px / 64% 18px no-repeat;
+  animation: skel 1.6s linear infinite; }
+@keyframes skel { from { background-position: 180% 0, 0 0, 0 56px, 0 86px, 0 116px; } to { background-position: -80% 0, 0 0, 0 56px, 0 86px, 0 116px; } }
+body.fx-off .placeholder:has(.spinner)::after { animation: none; }
+/* hextech töltő-gyűrű */
+.spinner { border-width: 2px !important; border-color: rgba(var(--champ-rgb), .15) !important; border-top-color: var(--champ) !important; }
+
+/* ---------------------------------------------------------------- érintős / kisebb kijelző */
+@media (pointer: coarse), (max-width: 700px) {
+  .fx-mesh i:nth-child(3) { display: none; }
+  .fx-tilt, .fx-mag { transform: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fx-mesh i, .side-brand img, .avatar, .fx-grow, .fx-in, .page.fx-page { animation: none !important; }
+  .fx-r { opacity: 1; transform: none; }
+}
+
+/* a háttér-réteg (#bg) csak akkor látszik, ha a body nem fed le mindent: az <html> adja az alapszínt */
+body { background: transparent !important; }
