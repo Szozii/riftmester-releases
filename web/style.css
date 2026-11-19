@@ -771,21 +771,21 @@ body.page-enter #content > *:nth-child(n+6) { animation-delay: .33s; }
 .placeholder .spinner { position: relative; }
 
 /* ---------------- TELJESÍTMÉNY-KAPU: meccs közben és visszafogott módban minden folyamatos animáció áll ---------------- */
-body.in-game .hero-img, body.fx-off .hero-img { animation: heroFade 1s ease-out both; transform: scale(1.06); }
-body.in-game #bgImg, body.fx-off #bgImg { animation: none; transform: none; }
-body.in-game .hero::before, body.fx-off .hero::before,
-body.in-game .hero::after, body.fx-off .hero::after,
-body.in-game .champ-name, body.fx-off .champ-name,
-body.in-game .glow, body.fx-off .glow, body.in-game #bg .glow.g3, body.fx-off #bg .glow.g3,
-body.in-game .btn.full, body.fx-off .btn.full,
-body.in-game .nav-btn.on::after, body.fx-off .nav-btn.on::after,
-body.in-game .status .dot::after, body.fx-off .status .dot::after,
-body.in-game .mtab.on::after, body.fx-off .mtab.on::after,
-body.in-game .hexring::before, body.fx-off .hexring::before,
-body.in-game .spinner::after, body.fx-off .spinner::after { animation: none !important; }
+body.fx-off .hero-img { animation: heroFade 1s ease-out both; transform: scale(1.06); }
+body.fx-off #bgImg { animation: none; transform: none; }
+body.fx-off .hero::before,
+body.fx-off .hero::after,
+body.fx-off .champ-name,
+body.fx-off .glow, body.fx-off #bg .glow.g3,
+body.fx-off .btn.full,
+body.fx-off .nav-btn.on::after,
+body.fx-off .status .dot::after,
+body.fx-off .mtab.on::after,
+body.fx-off .hexring::before,
+body.fx-off .spinner::after { animation: none !important; }
 /* a név maradjon olvasható, ha a csillanás ki van kapcsolva */
-body.in-game .champ-name, body.fx-off .champ-name { -webkit-text-fill-color: #fff; background: none; }
-body.in-game .hero::before, body.fx-off .hero::before { display: none; }
+body.fx-off .champ-name { -webkit-text-fill-color: #fff; background: none; }
+body.fx-off .hero::before { display: none; }
 /* belépő-stagger csak akkor, ha nem visszafogott; meccs közben halkabb */
 body.fx-off #content > *, body.fx-off #csContent > *, body.fx-off #igContent > *, body.fx-off #statsContent > * { animation: none !important; }
 
@@ -1098,8 +1098,8 @@ body.fx-off #content > *, body.fx-off #csContent > *, body.fx-off #igContent > *
 .btn.full { background: linear-gradient(180deg, rgba(var(--champ-rgb), .22), rgba(15,15,36,.7)); }
 
 /* teljesítmény-kapu: a körbefutó keret és az aurora is álljon meg meccs közben / rejtve */
-body.in-game .hero-glow, body.fx-off .hero-glow,
-body.in-game #bg::before, body.fx-off #bg::before { animation: none !important; }
+body.fx-off .hero-glow,
+body.fx-off #bg::before { animation: none !important; }
 @media (prefers-reduced-motion: reduce) { .hero-glow, #bg::before { animation: none !important; } }
 
 /* ================================================================ v12 – kedvencek, esport, rendezés */
@@ -1593,10 +1593,10 @@ input, textarea { caret-color: var(--violet2); }
 /* ===== Teljesítmény (3.25.3): kíméljük a gépet a LoL kliens mellett ===== */
 *, *::before, *::after { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
 #bg::before { filter: none; }
-body.fx-off .glow, body.in-game .glow, body.fx-off #bg .glow.g3, body.in-game #bg .glow.g3 { display: none; }
-body.fx-off #bgImg, body.in-game #bgImg { filter: none; opacity: .18; will-change: auto; }
-body.fx-off #bg::before, body.in-game #bg::before { display: none; }
-body.fx-off .hero-img, body.in-game .hero-img { will-change: auto; }
+body.fx-off .glow, body.fx-off #bg .glow.g3{ display: none; }
+body.fx-off #bgImg{ filter: none; opacity: .18; will-change: auto; }
+body.fx-off #bg::before{ display: none; }
+body.fx-off .hero-img{ will-change: auto; }
 
 /* ---- Tilt-őr, hőskészlet-edző, összefoglaló kártya ---- */
 .tilt { display: flex; gap: 14px; align-items: flex-start; padding: 14px 18px; margin: 14px 0 12px; border-left: 4px solid var(--good); }
